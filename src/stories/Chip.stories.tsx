@@ -5,10 +5,13 @@ import React from 'react';
 export default {
   title: 'Chip',
   component: Chip,
+  decorators: [
+    (Story: any) => (
+      <StoryWrap>
+        <Story />
+      </StoryWrap>
+    ),
+  ],
 };
 
-export const Default = () => (
-  <StoryWrap>
-    <Chip>Chip</Chip>
-  </StoryWrap>
-);
+export const Default = () => <Chip>Chip</Chip>;
