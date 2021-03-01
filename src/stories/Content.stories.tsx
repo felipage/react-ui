@@ -1,15 +1,15 @@
 import { Content } from '..';
-import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-const stories = storiesOf('Content', module);
+export default {
+  title: 'Content',
+  component: Content,
+};
 
-stories.add('Default', () => {
-  return (
-    <Content>
-      <div className="flex items-center justify-center w-full h-32 text-white bg-indigo-600">
-        Content
-      </div>
-    </Content>
-  );
-});
+export const Default = () => (
+  <Content>
+    <div className="flex items-center justify-center w-full h-32 text-white bg-indigo-600">
+      Content
+    </div>
+  </Content>
+);
