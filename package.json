@@ -29,7 +29,8 @@
     "deploy-storybook": "npm run deploy && gh-pages -d storybook-static"
   },
   "peerDependencies": {
-    "react": "^17.0.1"
+    "react": "^17.0.1",
+    "react-icons": "^4.2.0"
   },
   "husky": {
     "hooks": {
@@ -74,7 +75,6 @@
     "postcss": "^8.2.6",
     "react": "*",
     "react-dom": "^17.0.1",
-    "react-icons": "^4.2.0",
     "size-limit": "^4.9.2",
     "tailwindcss": "^2.0.3",
     "tsdx": "^0.14.1",
