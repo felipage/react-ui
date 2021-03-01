@@ -4,11 +4,13 @@ import ChipBase from './ChipBase';
 export interface ChipProps {
   children: ReactNode;
   active?: boolean;
+  onClick?: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
 }
 
-const Chip = ({ children, active = false }: ChipProps) => {
+const Chip = ({ children, active = false, onClick }: ChipProps) => {
   return (
     <ChipBase
+      onClick={onClick}
       className={`${
         active
           ? 'bg-feli-lighter hover:bg-feli-light active:bg-feli text-black active:text-white'
