@@ -3,13 +3,13 @@ import React, { ReactNode } from 'react';
 
 type colours = 'red' | 'green' | 'default';
 
-interface Props {
+export interface AlertProps {
   children: ReactNode;
   className?: string;
   colour?: colours;
 }
 
-const Alert = ({ children, colour = 'default' }: Props) => {
+const Alert = ({ children, colour = 'default' }: AlertProps) => {
   return (
     <AlertBase
       className={

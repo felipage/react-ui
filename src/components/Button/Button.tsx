@@ -3,13 +3,13 @@ import React, { ReactNode } from 'react';
 
 type colours = 'red' | 'default';
 
-interface Props {
+export interface ButtonProps {
   children: ReactNode;
   colour?: colours;
   onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
 
-const Button = ({ children, colour = 'default', onClick }: Props) => {
+const Button = ({ children, colour = 'default', onClick }: ButtonProps) => {
   return (
     <ButtonBase
       onClick={onClick}

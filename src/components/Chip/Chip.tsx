@@ -1,12 +1,12 @@
 import React, { ReactNode } from 'react';
 import ChipBase from './ChipBase';
 
-interface Props {
+export interface ChipProps {
   children: ReactNode;
   active?: boolean;
 }
 
-const Chip = ({ children, active = false }: Props) => {
+const Chip = ({ children, active = false }: ChipProps) => {
   return (
     <ChipBase
       className={`${

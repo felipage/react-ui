@@ -1,13 +1,13 @@
 import React, { ReactNode } from 'react';
 import { IconType } from 'react-icons';
 
-interface Props {
+export interface AppBarProps {
   title: string;
   Icon?: IconType;
   actions?: ReactNode[];
 }
 
-const AppBar = ({ title, actions = [], Icon }: Props) => {
+const AppBar = ({ title, actions = [], Icon }: AppBarProps) => {
   return (
     <header className="flex items-center justify-center px-2 bg-white shadow-md min-h-56 md:min-h-64 dark:bg-black sm:px-4 md:px-8">
       <div className="flex items-center justify-between w-full max-w-6xl">
