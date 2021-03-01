@@ -5,7 +5,7 @@ interface Props {
 }
 
 const StoryWrap = ({ children }: Props) => {
-  return <div className="m-4">{children}</div>;
+  return <div className="m-5">{children}</div>;
 };
 
 export default StoryWrap;
