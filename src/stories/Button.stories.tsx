@@ -1,5 +1,7 @@
 import StoryWrap from './StoryWrap';
 import { Button } from '..';
+import { ButtonProps } from '@/components/Button/Button';
+import { Meta, Story } from '@storybook/react';
 import React from 'react';
 
 export default {
@@ -12,8 +14,21 @@ export default {
       </StoryWrap>
     ),
   ],
+  argTypes: {
+    onClick: { action: 'click' },
+  },
+} as Meta;
+
+const Template: Story<ButtonProps> = args => <Button {...args} />;
+
+export const Default = Template.bind({});
+Default.args = {
+  children: 'Button',
+  colour: 'default',
 };
 
-export const Default = () => <Button>Button</Button>;
-
-export const Red = () => <Button colour="red">Delete</Button>;
+export const Red = Template.bind({});
+Red.args = {
+  children: 'Delete',
+  colour: 'red',
+};

@@ -1,5 +1,7 @@
 import StoryWrap from './StoryWrap';
+import { ChipProps } from '../components/Chip/Chip';
 import { Chip } from '..';
+import { Meta, Story } from '@storybook/react';
 import React from 'react';
 
 export default {
@@ -12,6 +14,11 @@ export default {
       </StoryWrap>
     ),
   ],
-};
+} as Meta;
 
-export const Default = () => <Chip>Chip</Chip>;
+const Template: Story<ChipProps> = args => <Chip {...args} />;
+
+export const Default = Template.bind({});
+Default.args = {
+  children: 'Chip',
+};
