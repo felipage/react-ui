@@ -1,0 +1,79 @@
+{
+  "version": "0.1.1",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "description": "Feli Page's React Component Library",
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "build-tailwind": "tailwindcss build src/styles/tailwind.css -o src/styles/main.css"
+  },
+  "peerDependencies": {
+    "react": "^17.0.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "name": "@felipage/react-ui",
+  "author": "Felix Yeung Lai Ting",
+  "module": "dist/react-ui.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/react-ui.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/react-ui.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.13.8",
+    "@felipage/tailwind-feli": "^1.0.2",
+    "@size-limit/preset-small-lib": "^4.9.2",
+    "@storybook/addon-actions": "^6.2.0-beta.3",
+    "@storybook/addon-essentials": "^6.2.0-beta.3",
+    "@storybook/addon-links": "^6.2.0-beta.3",
+    "@storybook/react": "^6.2.0-beta.3",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.1",
+    "autoprefixer": "^10.2.4",
+    "babel-loader": "^8.2.2",
+    "husky": "^5.1.2",
+    "postcss": "^8.2.6",
+    "react": "*",
+    "react-dom": "^17.0.1",
+    "size-limit": "^4.9.2",
+    "tailwindcss": "^2.0.3",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.1.0",
+    "typescript": "^3.9.9",
+    "react-icons": "^4.2.0"
+  },
+  "dependencies": {}
+}
