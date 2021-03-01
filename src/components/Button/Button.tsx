@@ -1,4 +1,4 @@
-import ButtonBase from './ButtonBase';
+import ButtonBase, { buttonSizes } from './ButtonBase';
 import React, { ReactNode } from 'react';
 
 type colours = 'red' | 'default';
@@ -7,11 +7,18 @@ export interface ButtonProps {
   children: ReactNode;
   colour?: colours;
   onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+  size: buttonSizes;
 }
 
-const Button = ({ children, colour = 'default', onClick }: ButtonProps) => {
+const Button = ({
+  children,
+  colour = 'default',
+  onClick,
+  size,
+}: ButtonProps) => {
   return (
     <ButtonBase
+      size={size}
       onClick={onClick}
       className={
         colour === 'default'

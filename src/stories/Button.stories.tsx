@@ -25,10 +25,24 @@ export const Default = Template.bind({});
 Default.args = {
   children: 'Button',
   colour: 'default',
+  size: 'normal',
 };
 
 export const Red = Template.bind({});
 Red.args = {
+  ...Default.args,
   children: 'Delete',
   colour: 'red',
+};
+
+export const Small = Template.bind({});
+Small.args = {
+  ...Default.args,
+  size: 'small',
+};
+
+export const Large = Template.bind({});
+Large.args = {
+  ...Default.args,
+  size: 'large',
 };
