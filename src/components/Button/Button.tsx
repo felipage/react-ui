@@ -7,7 +7,7 @@ export interface ButtonProps {
   children: ReactNode;
   colour?: colours;
   onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
-  size: buttonSizes;
+  size?: buttonSizes;
 }
 
 const Button = ({
