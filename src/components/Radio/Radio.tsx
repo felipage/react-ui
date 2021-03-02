@@ -27,8 +27,8 @@ const Radio = ({
         <span
           className={`w-6 h-6 rounded-full transition ${
             fChecked
-              ? 'bg-feli ring-inset ring-3 ring-white ring-offset-2 ring-offset-feli'
-              : 'bg-white ring-inset ring-3 ring-white ring-offset-2 ring-offset-gray-500'
+              ? 'bg-feli ring-inset ring-3 ring-white dark:ring-black ring-offset-2 ring-offset-feli'
+              : 'bg-white dark:bg-black ring-inset ring-3 ring-white dark:ring-black ring-offset-2 ring-offset-gray-500'
           }`}
         ></span>
       </span>
