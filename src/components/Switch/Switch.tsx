@@ -1,12 +1,18 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 export interface SwitchProps {
   onChange: (value: boolean) => void;
   label?: string;
+  checked: boolean;
 }
 
-const Switch = ({ onChange = () => {}, label }: SwitchProps) => {
-  const [checked, setChecked] = useState(false);
+const Switch = ({ onChange = () => {}, label, checked }: SwitchProps) => {
+  const [fChecked, fSetChecked] = useState(false);
+
+  useEffect(() => {
+    fSetChecked(checked);
+  }, [checked]);
+
   return (
     <label className="inline-flex flex-row-reverse items-center pr-2 transition-shadow rounded focus-within:ring-2 ring-feli">
       {label}
@@ -16,22 +22,22 @@ const Switch = ({ onChange = () => {}, label }: SwitchProps) => {
         onChange={e => {
           const { checked } = e.target;
           onChange(checked);
-          setChecked(checked);
+          fSetChecked(checked);
         }}
       ></input>
       <span
         className={`cursor-pointer relative w-7 h-3 mr-4 transition-colors rounded-full ${
-          checked ? 'bg-feli-light' : 'bg-gray-400'
+          fChecked ? 'bg-feli-light' : 'bg-gray-400'
         }`}
       >
         <span
           className={`transform -left-3 absolute inline-flex items-center justify-center w-8 h-8 transition-all rounded-full -top-2.5 hover:bg-feli-opacity-400 active:bg-feli-opacity-600 focus:bg-feli-opacity-400 ${
-            checked ? 'translate-x-5' : ''
+            fChecked ? 'translate-x-5' : ''
           }`}
         >
           <span
             className={`flex items-center justify-center w-5 h-5 transition rounded-full shadow ${
-              checked ? 'bg-feli' : 'bg-white'
+              fChecked ? 'bg-feli' : 'bg-white'
             }`}
           ></span>
         </span>
