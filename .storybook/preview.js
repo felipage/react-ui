@@ -5,6 +5,11 @@ import StoryBackgroundWrap from '../src/stories/StoryBackgroundWrap';
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   layout: 'fullscreen',
+  darkMode: {
+    darkClass: 'dark',
+    lightClass: 'light',
+    stylePreview: true,
+  },
 };
 
 export const decorators = [
