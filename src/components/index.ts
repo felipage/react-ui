@@ -8,3 +8,4 @@ export * from './Input';
 export * from './Radio';
 export * from './ProgressBar';
 export * from './FloatingActionButton';
+export * from './Switch';
