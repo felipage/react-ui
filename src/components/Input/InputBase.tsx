@@ -8,7 +8,7 @@ export interface InputBaseProps {
   placeholder?: string;
   disabled?: boolean;
   label?: ReactNode;
-  list: string;
+  list?: string;
 }
 
 const InputBase = ({
