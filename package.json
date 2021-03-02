@@ -25,7 +25,7 @@
     "build-storybook": "build-storybook",
     "build-tailwind": "tailwindcss build src/styles/tailwind.css -o src/styles/main.css",
     "predeploy": "rm -rf storybook-static",
-    "deploy": "npm run build-storybook",
+    "deploy": "npm run build-tailwind && npm run build-storybook",
     "postdeploy": "cp .CNAME storybook-static/CNAME",
     "deploy-storybook": "npm run deploy && gh-pages -d storybook-static"
   },
