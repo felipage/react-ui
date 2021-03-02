@@ -6,3 +6,4 @@ export * from './Chip';
 export * from './Checkbox';
 export * from './Input';
 export * from './Radio';
+export * from './ProgressBar';
