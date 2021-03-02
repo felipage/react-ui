@@ -16,7 +16,7 @@ const ProgressBar = ({ progress = 0, label }: ProgressBarProps) => {
         max="100"
         className="w-0 h-0 opacity-0"
       ></progress>
-      <span className="relative inline-block w-full h-1 max-w-lg bg-gray-300 rounded-full dark:bg-gray-600">
+      <span className="relative inline-block w-full h-1 max-w-lg overflow-hidden bg-gray-300 rounded-full dark:bg-gray-600">
         <span
           style={{ width: `${progress * 100}%` }}
           className="absolute h-1 bg-feli"
