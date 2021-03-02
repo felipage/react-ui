@@ -1,5 +1,5 @@
-import React, { ReactNode } from 'react';
 import ChipBase from './ChipBase';
+import React, { ReactNode } from 'react';
 
 export interface ChipProps {
   children: ReactNode;

@@ -1,5 +1,5 @@
-import React from 'react';
 import InputBase, { InputBaseProps } from './InputBase';
+import React from 'react';
 
 export interface DropdownInputProps extends InputBaseProps {
   options: string[];

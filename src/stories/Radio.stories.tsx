@@ -1,9 +1,9 @@
 import StoryWrap from './StoryWrap';
+import { RadioProps } from '../components/Radio/Radio';
+import { RadioGroupProps } from '../components/Radio/RadioGroup';
 import { Radio, RadioGroup } from '..';
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
-import { RadioProps } from '../components/Radio/Radio';
-import { RadioGroupProps } from '../components/Radio/RadioGroup';
 
 export default {
   title: 'Radio',

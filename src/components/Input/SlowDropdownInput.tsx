@@ -1,5 +1,5 @@
-import React from 'react';
 import SlowInput, { SlowInputProps } from './SlowInput';
+import React from 'react';
 
 export interface SlowDropdownInputProps extends SlowInputProps {
   options: string[];

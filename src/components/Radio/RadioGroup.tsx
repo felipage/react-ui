@@ -1,5 +1,5 @@
-import React, { ReactNode, useState } from 'react';
 import Radio from './Radio';
+import React, { ReactNode, useState } from 'react';
 
 export interface RadioGroupOptions {
   value: string;

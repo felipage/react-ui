@@ -1,6 +1,6 @@
+import InputBase, { InputBaseProps } from './InputBase';
 import React from 'react';
 import { useEffect, useState } from 'react';
-import InputBase, { InputBaseProps } from './InputBase';
 
 export interface SlowInputProps extends InputBaseProps {}
 

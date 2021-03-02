@@ -1,8 +1,8 @@
 import StoryWrap from './StoryWrap';
 import { ProgressBar } from '..';
+import { ProgressBarProps } from '@/components/ProgressBar/ProgressBar';
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
-import { ProgressBarProps } from '@/components/ProgressBar/ProgressBar';
 
 export default {
   title: 'Progress Bar',
