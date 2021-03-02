@@ -3,12 +3,19 @@ import React, { ReactNode } from 'react';
 export interface AlertBaseProps {
   children: ReactNode;
   className?: string;
+  fixed?: boolean;
 }
 
-const AlertBase = ({ children, className = '' }: AlertBaseProps) => {
+const AlertBase = ({
+  children,
+  className = '',
+  fixed = true,
+}: AlertBaseProps) => {
   return (
     <div
-      className={`fixed bottom-0 w-full px-4 py-2 transition-colors shadow-md ${className}`}
+      className={`w-full px-4 py-2 transition-colors shadow-md ${
+        fixed ? 'fixed bottom-0' : ''
+      } ${className}`}
     >
       {children}
     </div>

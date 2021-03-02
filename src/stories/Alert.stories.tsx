@@ -14,6 +14,13 @@ export const Default = Template.bind({});
 Default.args = {
   children: "Feli Page's React Component Library",
   colour: 'default',
+  fixed: false,
+};
+
+export const Fixed = Template.bind({});
+Fixed.args = {
+  ...Default.args,
+  fixed: true,
 };
 
 export const Red = Template.bind({});

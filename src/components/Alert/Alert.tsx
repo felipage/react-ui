@@ -1,15 +1,13 @@
-import AlertBase from './AlertBase';
-import React, { ReactNode } from 'react';
+import AlertBase, { AlertBaseProps } from './AlertBase';
+import React from 'react';
 
 type colours = 'red' | 'green' | 'default';
 
-export interface AlertProps {
-  children: ReactNode;
-  className?: string;
+export interface AlertProps extends AlertBaseProps {
   colour?: colours;
 }
 
-const Alert = ({ children, colour = 'default' }: AlertProps) => {
+const Alert = ({ children, colour = 'default', ...rest }: AlertProps) => {
   return (
     <AlertBase
       className={
@@ -21,6 +19,7 @@ const Alert = ({ children, colour = 'default' }: AlertProps) => {
           ? 'text-red-700 bg-red-400 dark:bg-red-900 dark:text-red-200'
           : ''
       }
+      {...rest}
     >
       {children}
     </AlertBase>
