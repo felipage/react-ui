@@ -58,9 +58,10 @@
   ],
   "devDependencies": {
     "@babel/core": "^7.13.8",
-    "@felipage/tailwind-feli": "^1.0.2",
+    "@felipage/tailwind-feli": "^1.0.3",
     "@size-limit/preset-small-lib": "^4.9.2",
     "@storybook/addon-actions": "^6.2.0-beta.3",
+    "@storybook/addon-console": "^1.2.3",
     "@storybook/addon-essentials": "^6.2.0-beta.3",
     "@storybook/addon-links": "^6.2.0-beta.3",
     "@storybook/react": "^6.2.0-beta.3",
