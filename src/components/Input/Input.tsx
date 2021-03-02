@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import InputBase, { InputBaseProps } from './InputBase';
 
 export interface InputProps extends InputBaseProps {}
