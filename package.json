@@ -20,6 +20,7 @@
     "prepare": "tsdx build",
     "size": "size-limit",
     "analyze": "size-limit --why",
+    "prestorybook": "npm run build-tailwind",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "build-tailwind": "tailwindcss build src/styles/tailwind.css -o src/styles/main.css",
