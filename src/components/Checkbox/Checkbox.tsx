@@ -39,7 +39,7 @@ const Checkbox = ({
       ></input>
 
       <span
-        className={`inline-flex items-center justify-center hover:bg-feli-lightest active:bg-feli-lighter focus:bg-feli-lightest rounded-full transition-colors mr-2 ${
+        className={`inline-flex items-center justify-center hover:bg-feli-opacity-400 active:bg-feli-opacity-600 focus:bg-feli-opacity-400 rounded-full transition-colors mr-2 ${
           size === 'small'
             ? 'w-6 h-6'
             : size === 'normal'
