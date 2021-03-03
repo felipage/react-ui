@@ -26,7 +26,7 @@ const Dialog = ({ open, onClose = () => {}, children }: DialogProps) => {
           }}
         >
           <div
-            className="flex flex-col w-full h-full max-w-screen-md max-h-screen divide-y-2 divide-gray-200 shadow-xl md:max-w-screen-sm md:h-auto dark:divide-gray-700 min-h-64 bg-gray-50 dark:bg-dark md:rounded-lg"
+            className="flex flex-col w-full h-full max-w-screen-md max-h-screen shadow-xl divide-y- md:max-w-screen-sm md:h-auto dark:divide-gray-700 min-h-64 bg-gray-50 dark:bg-dark md:rounded-lg"
             onClick={e => {
               e.stopPropagation();
             }}
