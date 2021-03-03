@@ -14,17 +14,29 @@ export const Default = Template.bind({});
 Default.args = {
   Icon: HiOutlineSparkles,
   title: 'App Bar',
-  actions: [<Button>Action #1</Button>, <Button>Action #2</Button>],
+  actions: (
+    <>
+      <Button>Action #1</Button>, <Button>Action #2</Button>
+    </>
+  ),
 };
 
 export const SignedOut = Template.bind({});
 SignedOut.args = {
   ...Default.args,
-  actions: [<Button>Sign In</Button>, <Button>Sign Up</Button>],
+  actions: (
+    <>
+      <Button>Sign In</Button>, <Button>Sign Up</Button>
+    </>
+  ),
 };
 
 export const SignedIn = Template.bind({});
 SignedIn.args = {
   ...Default.args,
-  actions: [<Button>Sign Out</Button>],
+  actions: (
+    <>
+      <Button>Sign Out</Button>
+    </>
+  ),
 };

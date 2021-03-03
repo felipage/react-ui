@@ -50,7 +50,12 @@ export const Home = () => {
       <AppBar
         Icon={UserIcon}
         title="App Bar"
-        actions={[<Button>Log In</Button>, <Button>Sign Up</Button>]}
+        actions={
+          <>
+            <Button>Log In</Button>
+            <Button>Sign Up</Button>
+          </>
+        }
       />
       <Content>
         <div className="mt-3">
