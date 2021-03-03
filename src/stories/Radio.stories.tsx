@@ -1,7 +1,5 @@
 import StoryWrap from './StoryWrap';
-import { RadioProps } from '../components/Radio/Radio';
-import { RadioGroupProps } from '../components/Radio/RadioGroup';
-import { Radio, RadioGroup } from '..';
+import { Radio, RadioGroup, RadioGroupProps, RadioProps } from '..';
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
 

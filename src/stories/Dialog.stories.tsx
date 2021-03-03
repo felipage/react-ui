@@ -1,4 +1,6 @@
 import StoryWrap from './StoryWrap';
+import { Meta, Story } from '@storybook/react';
+import React from 'react';
 import {
   Dialog,
   DialogTitle,
@@ -9,13 +11,11 @@ import {
   PromptDialog,
   Input,
   ConfirmDialog,
+  DialogProps,
+  AlertDialogProps,
+  ConfirmDialogProps,
+  PromptDialogProps,
 } from '..';
-import { Meta, Story } from '@storybook/react';
-import React from 'react';
-import { DialogProps } from '../components/Dialog/Dialog';
-import { AlertDialogProps } from '../components/Dialog/AlertDialog';
-import { ConfirmDialogProps } from '../components/Dialog/ConfirmDialog';
-import { PromptDialogProps } from '../components/Dialog/PromptDialog';
 
 export default {
   title: 'Dialog',

@@ -1,6 +1,5 @@
 import StoryWrap from './StoryWrap';
-import { Button } from '..';
-import { ButtonProps } from '@/components/Button/Button';
+import { Button, ButtonProps } from '..';
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
 

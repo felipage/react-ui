@@ -1,8 +1,5 @@
 import React from 'react';
-import Button from '../components/Button/Button';
-import { useDialog, DialogProvider } from '..';
-import AppBar from '../components/AppBar/AppBar';
-import { Content } from '../components';
+import { useDialog, DialogProvider, Button, AppBar, Content } from '..';
 
 export default {
   title: 'Examples/Dialogs',

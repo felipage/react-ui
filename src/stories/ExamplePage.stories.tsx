@@ -1,7 +1,13 @@
-import { AppBar, Button, Content } from '..';
 import React, { useState } from 'react';
 import { HiOutlineUserCircle as UserIcon } from 'react-icons/hi';
-import { AlertDialog, ConfirmDialog, PromptDialog } from '../components';
+import {
+  AppBar,
+  Button,
+  Content,
+  AlertDialog,
+  ConfirmDialog,
+  PromptDialog,
+} from '..';
 
 export default {
   title: 'Examples/Home',

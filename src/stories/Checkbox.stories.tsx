@@ -1,6 +1,5 @@
 import StoryWrap from './StoryWrap';
-import { Checkbox } from '..';
-import { CheckboxProps } from '@/components/Checkbox/Checkbox';
+import { Checkbox, CheckboxProps } from '..';
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
 

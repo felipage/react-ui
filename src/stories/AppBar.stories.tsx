@@ -1,5 +1,4 @@
-import { AppBar, Button } from '..';
-import { AppBarProps } from '@/components/AppBar/AppBar';
+import { AppBar, AppBarProps, Button } from '..';
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
 import { HiOutlineSparkles } from 'react-icons/hi';

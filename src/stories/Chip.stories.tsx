@@ -1,6 +1,5 @@
 import StoryWrap from './StoryWrap';
-import { ChipProps } from '../components/Chip/Chip';
-import { Chip } from '..';
+import { Chip, ChipProps } from '..';
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
 

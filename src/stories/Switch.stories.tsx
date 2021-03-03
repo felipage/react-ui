@@ -1,8 +1,7 @@
 import StoryWrap from './StoryWrap';
-import { Switch } from '..';
+import { Switch, SwitchProps } from '..';
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
-import { SwitchProps } from '../components/Switch/Switch';
 
 export default {
   title: 'Switch',
