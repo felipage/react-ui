@@ -6,3 +6,5 @@ export { default as DialogContent } from './DialogContent';
 export { default as AlertDialog } from './AlertDialog';
 export { default as ConfirmDialog } from './ConfirmDialog';
 export { default as PromptDialog } from './PromptDialog';
+export { default as DialogProvider } from './DialogProvider';
+export * from './DialogProvider';
