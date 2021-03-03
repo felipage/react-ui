@@ -9,6 +9,7 @@ export interface InputBaseProps {
   disabled?: boolean;
   label?: ReactNode;
   list?: string;
+  fullWidth?: boolean;
 }
 
 const InputBase = ({
@@ -20,9 +21,13 @@ const InputBase = ({
   disabled,
   label,
   list,
+  fullWidth = false,
 }: InputBaseProps) => {
   return (
-    <label htmlFor={id} className="inline-flex flex-col">
+    <label
+      htmlFor={id}
+      className={`inline-flex flex-col ${fullWidth ? 'w-full' : ''}`}
+    >
       <span className="">{label}</span>
       <input
         list={list}
