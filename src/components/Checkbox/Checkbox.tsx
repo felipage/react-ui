@@ -17,7 +17,7 @@ const Checkbox = ({
   const [checked, setChecked] = useState(false);
   return (
     <label
-      className={`inline-flex flex-row-reverse items-center focus-within:ring-2 transition-shadow rounded ring-feli pr-2 ${
+      className={`inline-flex flex-row-reverse items-center focus-within:ring-3 transition-shadow rounded ring-feli pr-2 ${
         size === 'small'
           ? 'text-base'
           : size === 'normal'

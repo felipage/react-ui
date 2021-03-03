@@ -14,7 +14,7 @@ const Switch = ({ onChange = () => {}, label, checked }: SwitchProps) => {
   }, [checked]);
 
   return (
-    <label className="inline-flex flex-row-reverse items-center pr-2 transition-shadow rounded focus-within:ring-2 ring-feli">
+    <label className="inline-flex flex-row-reverse items-center pr-2 transition-shadow rounded focus-within:ring-3 ring-feli">
       {label}
       <input
         type="checkbox"

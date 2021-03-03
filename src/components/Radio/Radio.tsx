@@ -22,7 +22,7 @@ const Radio = ({
   }, [checked]);
 
   return (
-    <label className="inline-flex items-center rounded focus-within:ring-2 ring-feli">
+    <label className="inline-flex items-center rounded focus-within:ring-3 ring-feli">
       <span className="inline-flex items-center justify-center transition-colors rounded-full w-9 h-9 hover:bg-feli-opacity-400 active:bg-feli-opacity-600 focus:bg-feli-opacity-400">
         <span
           className={`w-6 h-6 rounded-full transition ${

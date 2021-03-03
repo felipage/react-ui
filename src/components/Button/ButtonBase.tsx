@@ -17,7 +17,7 @@ const Button = ({
 }: ButtonBaseProps) => {
   return (
     <button
-      className={`px-4 py-2 font-semibold text-black uppercase transition rounded shadow select-none hover:shadow-lg focus:outline-none ring-feli focus:ring-2 ${
+      className={`px-4 py-2 font-semibold text-black uppercase transition rounded shadow select-none hover:shadow-lg focus:outline-none ring-feli focus:ring-3 ${
         size === 'small'
           ? 'text-xs h-8 tracking-wide'
           : size === 'normal'
