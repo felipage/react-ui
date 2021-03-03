@@ -4,7 +4,7 @@ import { IconType } from 'react-icons';
 export interface AppBarProps {
   title: string;
   Icon?: IconType;
-  actions?: ReactNode[];
+  actions?: ReactNode;
 }
 
 const AppBar = ({ title, actions = [], Icon }: AppBarProps) => {
