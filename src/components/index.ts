@@ -11,3 +11,4 @@ export * from './FloatingActionButton';
 export * from './Switch';
 export * from './Dialog';
 export * from './Select';
+export * from './Underlay';

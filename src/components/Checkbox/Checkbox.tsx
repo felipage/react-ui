@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { HiCheck } from 'react-icons/hi';
+import { Underlay } from '../Underlay';
 
 type sizes = 'small' | 'normal' | 'large';
 
@@ -27,7 +28,7 @@ const Checkbox = ({
           : ''
       }`}
     >
-      {label}
+      <span className="ml-2">{label}</span>
       <input
         type="checkbox"
         className="w-0 h-0 opacity-0 focus:outline-none"
@@ -37,18 +38,7 @@ const Checkbox = ({
           setChecked(checked);
         }}
       ></input>
-
-      <span
-        className={`inline-flex items-center justify-center hover:bg-feli-opacity-400 active:bg-feli-opacity-600 focus:bg-feli-opacity-400 rounded-full transition-colors mr-2 ${
-          size === 'small'
-            ? 'w-6 h-6'
-            : size === 'normal'
-            ? 'w-8 h-8'
-            : size === 'large'
-            ? 'w-10 h-10'
-            : ''
-        }`}
-      >
+      <Underlay size={size}>
         <span
           className={`flex items-center justify-center ring-2 transition ${
             checked ? 'ring-feli' : 'ring-gray-500'
@@ -76,7 +66,7 @@ const Checkbox = ({
             />
           )}
         </span>
-      </span>
+      </Underlay>
     </label>
   );
 };

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Underlay } from '../Underlay';
 
 export interface SwitchProps {
   onChange: (value: boolean) => void;
@@ -31,15 +32,17 @@ const Switch = ({ onChange = () => {}, label, checked }: SwitchProps) => {
         }`}
       >
         <span
-          className={`transform -left-3 absolute inline-flex items-center justify-center w-8 h-8 transition-all rounded-full -top-2.5 hover:bg-feli-opacity-400 active:bg-feli-opacity-600 focus:bg-feli-opacity-400 ${
+          className={`absolute inline-flex items-center justify-center transform -left-3 -top-3 transition-transform ${
             fChecked ? 'translate-x-5' : ''
           }`}
         >
-          <span
-            className={`flex items-center justify-center w-5 h-5 transition rounded-full shadow ${
-              fChecked ? 'bg-feli' : 'bg-white'
-            }`}
-          ></span>
+          <Underlay>
+            <span
+              className={`flex items-center justify-center w-5 h-5 transition rounded-full shadow ${
+                fChecked ? 'bg-feli' : 'bg-white'
+              }`}
+            ></span>
+          </Underlay>
         </span>
       </span>
     </label>
