@@ -32,7 +32,7 @@ const Radio = ({
           }`}
         ></span>
       </span>
-      <span className="ml-2">{label}</span>
+      <span className="pr-2 ml-2">{label}</span>
       <input
         name={name}
         type="radio"
