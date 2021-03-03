@@ -22,9 +22,7 @@ const ConfirmDialog = ({
 }: ConfirmDialogProps) => {
   return (
     <Dialog {...rest}>
-      <DialogTitle>
-        <h1>{title}</h1>
-      </DialogTitle>
+      <DialogTitle>{title}</DialogTitle>
       <DialogContent>{children}</DialogContent>
       <DialogActions>
         <Button onClick={() => onClose(false)}>{cancelButtonText}</Button>

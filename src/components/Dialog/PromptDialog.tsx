@@ -27,9 +27,7 @@ const PromptDialog = ({
 
   return (
     <Dialog {...rest} onClose={() => onClose('')}>
-      <DialogTitle>
-        <h1>{title}</h1>
-      </DialogTitle>
+      <DialogTitle>{title}</DialogTitle>
       <DialogContent>
         <Input label={children} value={input} onChange={setInput} />
       </DialogContent>

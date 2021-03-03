@@ -19,9 +19,7 @@ const AlertDialog = ({
 }: AlertDialogProps) => {
   return (
     <Dialog {...rest} onClose={onClose}>
-      <DialogTitle>
-        <h1>{title}</h1>
-      </DialogTitle>
+      <DialogTitle>{title}</DialogTitle>
       <DialogContent>{children}</DialogContent>
       <DialogActions>
         <Button onClick={onClose}>{okButtonText}</Button>
