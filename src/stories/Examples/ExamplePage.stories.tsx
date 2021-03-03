@@ -10,7 +10,7 @@ import {
 } from '../..';
 
 export default {
-  title: 'Example/Home',
+  title: 'Examples/Home',
 };
 
 export const Home = () => {
