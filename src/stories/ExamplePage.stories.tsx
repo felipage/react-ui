@@ -4,7 +4,7 @@ import { HiOutlineUserCircle as UserIcon } from 'react-icons/hi';
 import { AlertDialog, ConfirmDialog, PromptDialog } from '../components';
 
 export default {
-  title: 'Example',
+  title: 'Examples/Home',
 };
 
 export const Home = () => {
