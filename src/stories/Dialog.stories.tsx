@@ -18,7 +18,7 @@ import {
 } from '..';
 
 export default {
-  title: 'Dialog',
+  title: 'Components/Dialog',
   component: Dialog,
   decorators: [
     (Story: any) => (

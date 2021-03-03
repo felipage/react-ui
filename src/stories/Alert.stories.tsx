@@ -3,7 +3,7 @@ import { Meta, Story } from '@storybook/react';
 import React from 'react';
 
 export default {
-  title: 'Alert',
+  title: 'Components/Alert',
   component: Alert,
 } as Meta;
 

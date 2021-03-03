@@ -4,7 +4,7 @@ import { Meta, Story } from '@storybook/react';
 import React from 'react';
 
 export default {
-  title: 'Radio',
+  title: 'Components/Radio',
   // component: Radio,
   decorators: [
     (Story: any) => (

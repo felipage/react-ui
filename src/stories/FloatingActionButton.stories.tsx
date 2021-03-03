@@ -5,7 +5,7 @@ import React from 'react';
 import { HiOutlinePlus } from 'react-icons/hi';
 
 export default {
-  title: 'Floating Action Button',
+  title: 'Components/Floating Action Button',
   component: FloatingActionButton,
   decorators: [
     (Story: any) => (

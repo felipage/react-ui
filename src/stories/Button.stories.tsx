@@ -4,7 +4,7 @@ import { Meta, Story } from '@storybook/react';
 import React from 'react';
 
 export default {
-  title: 'Button',
+  title: 'Components/Button',
   component: Button,
   decorators: [
     (Story: any) => (

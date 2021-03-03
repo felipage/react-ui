@@ -4,7 +4,7 @@ import { Meta, Story } from '@storybook/react';
 import React from 'react';
 
 export default {
-  title: 'Switch',
+  title: 'Components/Switch',
   component: Switch,
   decorators: [
     (Story: any) => (

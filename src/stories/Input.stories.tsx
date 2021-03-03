@@ -8,7 +8,7 @@ import { Meta, Story } from '@storybook/react';
 import React from 'react';
 
 export default {
-  title: 'Input',
+  title: 'Components/Input',
   component: Input,
   decorators: [
     (Story: any) => (

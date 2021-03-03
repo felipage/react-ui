@@ -4,7 +4,7 @@ import { Meta, Story } from '@storybook/react';
 import React from 'react';
 
 export default {
-  title: 'Progress Bar',
+  title: 'Components/Progress Bar',
   component: ProgressBar,
   decorators: [
     (Story: any) => (

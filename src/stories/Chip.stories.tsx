@@ -4,7 +4,7 @@ import { Meta, Story } from '@storybook/react';
 import React from 'react';
 
 export default {
-  title: 'Chip',
+  title: 'Components/Chip',
   component: Chip,
   decorators: [
     (Story: any) => (
