@@ -1,5 +1,5 @@
-import StoryWrap from './StoryWrap';
-import { FloatingActionButton, FloatingActionButtonProps } from '..';
+import StoryWrap from '../StoryWrap';
+import { FloatingActionButton, FloatingActionButtonProps } from '../..';
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
 import { HiOutlinePlus } from 'react-icons/hi';

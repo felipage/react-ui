@@ -1,5 +1,5 @@
-import StoryWrap from './StoryWrap';
-import { Select, SelectProps } from '..';
+import StoryWrap from '../StoryWrap';
+import { Select, SelectProps } from '../..';
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
 

@@ -1,4 +1,4 @@
-import StoryWrap from './StoryWrap';
+import StoryWrap from '../StoryWrap';
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
 import {
@@ -15,7 +15,7 @@ import {
   AlertDialogProps,
   ConfirmDialogProps,
   PromptDialogProps,
-} from '..';
+} from '../..';
 
 export default {
   title: 'Components/Dialog',

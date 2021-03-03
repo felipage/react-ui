@@ -1,4 +1,4 @@
-import { Alert, AlertProps } from '..';
+import { Alert, AlertProps } from '../..';
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
 

@@ -1,10 +1,10 @@
-import StoryWrap from './StoryWrap';
-import { Radio, RadioGroup, RadioGroupProps, RadioProps } from '..';
+import StoryWrap from '../../StoryWrap';
+import { Radio, RadioGroup, RadioGroupProps, RadioProps } from '../../..';
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
 
 export default {
-  title: 'Components/Radio',
+  title: 'Components/Selection Control/Radio',
   // component: Radio,
   decorators: [
     (Story: any) => (

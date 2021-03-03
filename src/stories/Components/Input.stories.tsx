@@ -1,5 +1,5 @@
-import StoryWrap from './StoryWrap';
-import { DropdownInput, Input, SlowDropdownInput, SlowInput } from '..';
+import StoryWrap from '../StoryWrap';
+import { DropdownInput, Input, SlowDropdownInput, SlowInput } from '../..';
 import { DropdownInputProps } from '@/components/Input/DropdownInput';
 import { InputProps } from '@/components/Input/Input';
 import { SlowDropdownInputProps } from '@/components/Input/SlowDropdownInput';

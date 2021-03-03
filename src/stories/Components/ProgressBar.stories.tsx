@@ -1,5 +1,5 @@
-import StoryWrap from './StoryWrap';
-import { ProgressBar, ProgressBarProps } from '..';
+import StoryWrap from '../StoryWrap';
+import { ProgressBar, ProgressBarProps } from '../..';
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
 

@@ -1,11 +1,11 @@
-import StoryWrap from './StoryWrap';
-import { Checkbox, CheckboxProps } from '..';
+import StoryWrap from '../StoryWrap';
+import { Underlay, UnderlayProps } from '../..';
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
 
 export default {
-  title: 'Components/Checkbox',
-  component: Checkbox,
+  title: 'Components/Underlay',
+  component: Underlay,
   decorators: [
     (Story: any) => (
       <StoryWrap>
@@ -15,7 +15,7 @@ export default {
   ],
 } as Meta;
 
-const Template: Story<CheckboxProps> = args => <Checkbox {...args} />;
+const Template: Story<UnderlayProps> = args => <Underlay {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

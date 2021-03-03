@@ -1,11 +1,11 @@
-import StoryWrap from './StoryWrap';
-import { Underlay, UnderlayProps } from '..';
+import StoryWrap from '../../StoryWrap';
+import { Switch, SwitchProps } from '../../..';
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
 
 export default {
-  title: 'Components/Underlay',
-  component: Underlay,
+  title: 'Components/Selection Control/Switch',
+  component: Switch,
   decorators: [
     (Story: any) => (
       <StoryWrap>
@@ -15,9 +15,10 @@ export default {
   ],
 } as Meta;
 
-const Template: Story<UnderlayProps> = args => <Underlay {...args} />;
+const Template: Story<SwitchProps> = args => <Switch {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  size: 'normal',
+  label: 'Label',
+  checked: false,
 };

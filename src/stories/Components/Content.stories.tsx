@@ -1,4 +1,4 @@
-import { Content, ContentProps } from '..';
+import { Content, ContentProps } from '../..';
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
 

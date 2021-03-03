@@ -7,7 +7,7 @@ import {
   AlertDialog,
   ConfirmDialog,
   PromptDialog,
-} from '..';
+} from '../..';
 
 export default {
   title: 'Example/Home',

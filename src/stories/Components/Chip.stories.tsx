@@ -1,11 +1,11 @@
-import StoryWrap from './StoryWrap';
-import { Switch, SwitchProps } from '..';
+import StoryWrap from '../StoryWrap';
+import { Chip, ChipProps } from '../..';
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
 
 export default {
-  title: 'Components/Switch',
-  component: Switch,
+  title: 'Components/Chip',
+  component: Chip,
   decorators: [
     (Story: any) => (
       <StoryWrap>
@@ -15,10 +15,9 @@ export default {
   ],
 } as Meta;
 
-const Template: Story<SwitchProps> = args => <Switch {...args} />;
+const Template: Story<ChipProps> = args => <Chip {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  label: 'Label',
-  checked: false,
+  children: 'Chip',
 };
