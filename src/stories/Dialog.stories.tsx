@@ -74,5 +74,5 @@ Confirm.args = {
 export const Prompt = PromptTemplate.bind({});
 Prompt.args = {
   open: true,
-  children: 'Confirm???',
+  children: 'Enter some text',
 };
