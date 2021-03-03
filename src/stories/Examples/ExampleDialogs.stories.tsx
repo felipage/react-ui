@@ -5,7 +5,7 @@ export default {
   title: 'Examples/Dialogs',
 };
 
-export const Default = () => {
+export const Dialogs = () => {
   return (
     <DialogProvider>
       <App></App>
