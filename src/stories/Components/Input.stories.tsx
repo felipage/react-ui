@@ -1,9 +1,14 @@
 import StoryWrap from '../StoryWrap';
-import { DropdownInput, Input, SlowDropdownInput, SlowInput } from '../..';
-import { DropdownInputProps } from '@/components/Input/DropdownInput';
-import { InputProps } from '@/components/Input/Input';
-import { SlowDropdownInputProps } from '@/components/Input/SlowDropdownInput';
-import { SlowInputProps } from '@/components/Input/SlowInput';
+import {
+  DropdownInput,
+  Input,
+  SlowDropdownInput,
+  SlowInput,
+  DropdownInputProps,
+  InputProps,
+  SlowDropdownInputProps,
+  SlowInputProps,
+} from '../..';
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
 
