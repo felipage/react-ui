@@ -1,13 +1,7 @@
 import { AppBar, Button, Content } from '..';
 import React, { useState } from 'react';
 import { HiOutlineUserCircle as UserIcon } from 'react-icons/hi';
-import {
-  Dialog,
-  DialogActions,
-  DialogContent,
-  DialogTitle,
-  Input,
-} from '../components';
+import { AlertDialog, ConfirmDialog, PromptDialog } from '../components';
 
 export default {
   title: 'Example',
@@ -15,17 +9,34 @@ export default {
 
 export const Home = () => {
   const [usernameDialogOpen, setUsernameDialogOpen] = useState(false);
-  const [username, setUsername] = useState('felipage');
-  const [tempUsername, setTempUsername] = useState('felipage');
+  const [username, setUsername] = useState('feli.page');
+  const [alertMessage, setAlertMessage] = useState('');
+  const [alertDialogOpen, setAlertDialogOpen] = useState(false);
+  const [confirmMessage, setConfirmMessage] = useState('');
+  const [confirmDialogOpen, setConfirmDialogOpen] = useState(false);
 
-  const onCancel = () => {
+  const onUsernameUpdate = (newUsername: string) => {
     setUsernameDialogOpen(false);
-    setTempUsername(username);
+    if (newUsername && newUsername !== '') {
+      setUsername(newUsername);
+      setAlertMessage('Username updated successfully');
+      setAlertDialogOpen(true);
+    }
   };
 
-  const onUpdate = () => {
-    setUsernameDialogOpen(false);
-    setUsername(tempUsername);
+  const deleteAccount = () => {
+    setConfirmMessage(
+      'Are you sure you want to delete this account?\nThis action cannot be undone'
+    );
+    setConfirmDialogOpen(true);
+  };
+
+  const onConfirmDeleteAccount = (confirm: boolean) => {
+    setConfirmDialogOpen(false);
+    if (confirm) {
+      setAlertMessage('Account Deleted');
+      setAlertDialogOpen(true);
+    }
   };
 
   return (
@@ -44,24 +55,28 @@ export const Home = () => {
           <Button onClick={() => setUsernameDialogOpen(true)}>
             Update Profile
           </Button>
+          <Button onClick={() => deleteAccount()} colour="red">
+            Delete Account
+          </Button>
         </div>
       </Content>
-      <Dialog open={usernameDialogOpen} onClose={() => onCancel()}>
-        <DialogTitle>
-          <h1>Update your Profile</h1>
-        </DialogTitle>
-        <DialogContent>
-          <Input
-            label="Your new username"
-            value={tempUsername}
-            onChange={setTempUsername}
-          />
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={() => onCancel()}>Cancel</Button>
-          <Button onClick={() => onUpdate()}>Update</Button>
-        </DialogActions>
-      </Dialog>
+      <PromptDialog
+        title="Update your Profile"
+        open={usernameDialogOpen}
+        onClose={onUsernameUpdate}
+        initialValue={username}
+      >
+        Your new username
+      </PromptDialog>
+      <AlertDialog
+        open={alertDialogOpen}
+        onClose={() => setAlertDialogOpen(false)}
+      >
+        {alertMessage}
+      </AlertDialog>
+      <ConfirmDialog open={confirmDialogOpen} onClose={onConfirmDeleteAccount}>
+        {confirmMessage}
+      </ConfirmDialog>
     </>
   );
 };
