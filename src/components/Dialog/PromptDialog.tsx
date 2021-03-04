@@ -1,4 +1,4 @@
-import React, { ReactNode, useState } from 'react';
+import React, { ReactNode, useEffect, useState } from 'react';
 import Button from '../Button/Button';
 import { Input } from '../Input';
 import Dialog, { DialogProps } from './Dialog';
@@ -24,6 +24,10 @@ const PromptDialog = ({
   ...rest
 }: PromptDialogProps) => {
   const [input, setInput] = useState(initialValue);
+
+  useEffect(() => {
+    setInput(initialValue);
+  }, [initialValue]);
 
   return (
     <Dialog {...rest} onClose={() => onClose('')}>

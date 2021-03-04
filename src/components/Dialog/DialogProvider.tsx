@@ -1,37 +1,48 @@
 import React, { createContext, ReactNode, useContext, useState } from 'react';
-import AlertDialog from './AlertDialog';
-import ConfirmDialog from './ConfirmDialog';
-import PromptDialog from './PromptDialog';
+import AlertDialog, { AlertDialogProps } from './AlertDialog';
+import ConfirmDialog, { ConfirmDialogProps } from './ConfirmDialog';
+import PromptDialog, { PromptDialogProps } from './PromptDialog';
 
 export interface DialogProviderProps {
   children: ReactNode;
 }
 
-export interface ShowDialogProps {
-  children: ReactNode;
-}
+export interface ShowDialogProps {}
 
-export interface ShowAlertDialogProps extends ShowDialogProps {}
-export interface ShowConfirmDialogProps extends ShowDialogProps {}
-export interface ShowPromptDialogProps extends ShowDialogProps {}
+export interface ShowAlertDialogProps
+  extends ShowDialogProps,
+    Omit<AlertDialogProps, 'open' | 'onClose'> {}
+export interface ShowConfirmDialogProps
+  extends ShowDialogProps,
+    Omit<ConfirmDialogProps, 'open' | 'onClose'> {}
+export interface ShowPromptDialogProps
+  extends ShowDialogProps,
+    Omit<PromptDialogProps, 'open' | 'onClose'> {}
 
 export interface IDialogContext {
-  showAlertDialog?: (props: ShowAlertDialogProps) => Promise<void>;
-  showConfirmDialog?: (props: ShowConfirmDialogProps) => Promise<boolean>;
-  showPromptDialog?: (props: ShowPromptDialogProps) => Promise<string>;
+  showAlertDialog: (props: ShowAlertDialogProps) => Promise<void>;
+  showConfirmDialog: (props: ShowConfirmDialogProps) => Promise<boolean>;
+  showPromptDialog: (props: ShowPromptDialogProps) => Promise<string>;
 }
 
-const DialogContext = createContext<IDialogContext>({});
+const DialogContext = createContext<IDialogContext | null>(null);
 
 const DialogProvider = ({ children }: DialogProviderProps) => {
   const [confirmDialogOpen, setConfirmDialogOpen] = useState(false);
-  const [confirmDialogMessage, setConfirmDialogMessage] = useState<ReactNode>(
-    ''
-  );
+  const [
+    confirmDialogProps,
+    setConfirmDialogProps,
+  ] = useState<ShowConfirmDialogProps | null>(null);
   const [alertDialogOpen, setAlertDialogOpen] = useState(false);
-  const [alertDialogMessage, setAlertDialogMessage] = useState<ReactNode>('');
+  const [
+    alertDialogProps,
+    setAlertDialogProps,
+  ] = useState<ShowAlertDialogProps | null>(null);
   const [promptDialogOpen, setPromptDialogOpen] = useState(false);
-  const [promptDialogMessage, setPromptDialogMessage] = useState<ReactNode>('');
+  const [
+    promptDialogProps,
+    setPromptDialogProps,
+  ] = useState<ShowPromptDialogProps | null>(null);
 
   const [alertResolve, setAlertResolve] = useState<
     (value: void | PromiseLike<void>) => void
@@ -43,43 +54,43 @@ const DialogProvider = ({ children }: DialogProviderProps) => {
     (value: string | PromiseLike<string>) => void
   >();
 
-  const showAlertDialog = ({ children }: ShowAlertDialogProps) => {
+  const showAlertDialog = (props: ShowAlertDialogProps) => {
     return new Promise<void>(resolve => {
       setAlertResolve(() => resolve);
-      setAlertDialogMessage(children);
+      setAlertDialogProps(props);
       setAlertDialogOpen(true);
     });
   };
-  const showConfirmDialog = ({ children }: ShowConfirmDialogProps) => {
+  const showConfirmDialog = (props: ShowConfirmDialogProps) => {
     return new Promise<boolean>(resolve => {
       setConfirmResolve(() => resolve);
-      setConfirmDialogMessage(children);
+      setConfirmDialogProps(props);
       setConfirmDialogOpen(true);
     });
   };
-  const showPromptDialog = ({ children }: ShowPromptDialogProps) => {
+  const showPromptDialog = (props: ShowPromptDialogProps) => {
     return new Promise<string>(resolve => {
       setPromptResolve(() => resolve);
-      setPromptDialogMessage(children);
+      setPromptDialogProps(props);
       setPromptDialogOpen(true);
     });
   };
 
   const onAlertClose = () => {
     setAlertDialogOpen(false);
-    setAlertDialogMessage(null);
+    setAlertDialogProps(null);
     alertResolve?.();
   };
 
   const onConfirmClose = (confirm: boolean) => {
     setConfirmDialogOpen(false);
-    setConfirmDialogMessage(null);
+    setConfirmDialogProps(null);
     confirmResolve?.(confirm);
   };
 
   const onPromptClose = (value: string) => {
     setPromptDialogOpen(false);
-    setPromptDialogMessage(null);
+    setPromptDialogProps(null);
     promptResolve?.(value);
   };
 
@@ -92,15 +103,21 @@ const DialogProvider = ({ children }: DialogProviderProps) => {
       }}
     >
       {children}
-      <AlertDialog open={alertDialogOpen} onClose={onAlertClose}>
-        {alertDialogMessage}
-      </AlertDialog>
-      <ConfirmDialog open={confirmDialogOpen} onClose={onConfirmClose}>
-        {confirmDialogMessage}
-      </ConfirmDialog>
-      <PromptDialog open={promptDialogOpen} onClose={onPromptClose}>
-        {promptDialogMessage}
-      </PromptDialog>
+      <AlertDialog
+        open={alertDialogOpen}
+        onClose={onAlertClose}
+        {...alertDialogProps!}
+      />
+      <ConfirmDialog
+        open={confirmDialogOpen}
+        onClose={onConfirmClose}
+        {...confirmDialogProps!}
+      />
+      <PromptDialog
+        open={promptDialogOpen}
+        onClose={onPromptClose}
+        {...promptDialogProps!}
+      />
     </DialogContext.Provider>
   );
 };
