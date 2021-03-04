@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useDialog, DialogProvider, Button, AppBar, Content } from '../..';
 
 export default {
@@ -15,20 +15,31 @@ export const Dialogs = () => {
 
 const App = () => {
   const { showAlertDialog, showConfirmDialog, showPromptDialog } = useDialog()!;
+  const [logMessage, setLogMessage] = useState(
+    'Click the buttons to get started'
+  );
 
   const alert = async () => {
+    setLogMessage('Showing alert');
     await showAlertDialog({ children: 'This is an alert' });
+    setLogMessage('Alert closed');
   };
 
   const confirm = async () => {
-    await showConfirmDialog({ children: 'This is a confirmation' });
+    setLogMessage('Awaiting confirmation');
+    const confirm = await showConfirmDialog({
+      children: 'This is a confirmation',
+    });
+    setLogMessage(`Confirmation ${confirm}`);
   };
 
   const prompt = async () => {
-    await showPromptDialog({
+    setLogMessage('Prompting for input');
+    const result = await showPromptDialog({
       children: 'This is a prompt',
       initialValue: 'Initial Value',
     });
+    setLogMessage(`Got result: ${result}`);
   };
 
   return (
@@ -40,6 +51,7 @@ const App = () => {
           <Button onClick={confirm}>Confirm</Button>
           <Button onClick={prompt}>Prompt</Button>
         </div>
+        <code className="mt-8">{logMessage}</code>
       </Content>
     </>
   );
