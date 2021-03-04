@@ -1,4 +1,4 @@
-import React, { ReactNode, useEffect, useState } from 'react';
+import React, { ReactNode, useEffect, useRef, useState } from 'react';
 import Button from '../Button/Button';
 import { Input } from '../Input';
 import Dialog, { DialogProps } from './Dialog';
@@ -21,19 +21,31 @@ const PromptDialog = ({
   okButtonText = 'Ok',
   cancelButtonText = 'Cancel',
   initialValue = '',
+  open,
   ...rest
 }: PromptDialogProps) => {
   const [input, setInput] = useState(initialValue);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     setInput(initialValue);
   }, [initialValue]);
 
+  useEffect(() => {
+    open && inputRef.current?.focus();
+  }, [open]);
+
   return (
-    <Dialog {...rest} onClose={() => onClose('')}>
+    <Dialog onClose={() => onClose('')} open={open} {...rest}>
       <DialogTitle>{title}</DialogTitle>
       <DialogContent>
-        <Input label={children} value={input} onChange={setInput} fullWidth />
+        <Input
+          label={children}
+          value={input}
+          onChange={setInput}
+          fullWidth
+          ref={inputRef}
+        />
       </DialogContent>
       <DialogActions>
         <Button onClick={() => onClose('')}>{cancelButtonText}</Button>
