@@ -36,7 +36,7 @@ const PromptDialog = ({
   }, [open]);
 
   return (
-    <Dialog onClose={() => onClose('')} open={open} {...rest}>
+    <Dialog onClose={() => onClose(initialValue)} open={open} {...rest}>
       <DialogTitle>{title}</DialogTitle>
       <DialogContent>
         <Input
@@ -48,7 +48,9 @@ const PromptDialog = ({
         />
       </DialogContent>
       <DialogActions>
-        <Button onClick={() => onClose('')}>{cancelButtonText}</Button>
+        <Button onClick={() => onClose(initialValue)}>
+          {cancelButtonText}
+        </Button>
         <Button onClick={() => onClose(input)}>{okButtonText}</Button>
       </DialogActions>
     </Dialog>
