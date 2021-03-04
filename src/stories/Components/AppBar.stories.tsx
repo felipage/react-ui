@@ -16,7 +16,8 @@ Default.args = {
   title: 'Components/App Bar',
   actions: (
     <>
-      <Button>Action #1</Button>, <Button>Action #2</Button>
+      <Button>Action #1</Button>
+      <Button>Action #2</Button>
     </>
   ),
 };
@@ -26,7 +27,8 @@ SignedOut.args = {
   ...Default.args,
   actions: (
     <>
-      <Button>Sign In</Button>, <Button>Sign Up</Button>
+      <Button>Sign In</Button>
+      <Button>Sign Up</Button>
     </>
   ),
 };
