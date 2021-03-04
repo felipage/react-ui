@@ -10,7 +10,7 @@ const SlowInput = ({ value, onChange = () => {}, ...rest }: SlowInputProps) => {
   useEffect(() => {
     const timeout = setTimeout(() => onChange(localValue), 500);
     return () => clearTimeout(timeout);
-  }, [localValue]);
+  }, [localValue, onChange]);
 
   useEffect(() => setLocalValue(value ?? ''), [value]);
 

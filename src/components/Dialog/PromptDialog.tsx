@@ -32,7 +32,7 @@ const PromptDialog = ({
   }, [initialValue]);
 
   useEffect(() => {
-    open && inputRef.current?.focus();
+    if (open) inputRef.current?.focus();
   }, [open]);
 
   return (
