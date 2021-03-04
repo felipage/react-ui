@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { forwardRef, ReactNode } from 'react';
 
 export interface InputBaseProps {
   onChange?: (value: string) => void;
@@ -12,35 +12,41 @@ export interface InputBaseProps {
   fullWidth?: boolean;
 }
 
-const InputBase = ({
-  onChange = () => {},
-  value,
-  type,
-  id,
-  placeholder,
-  disabled,
-  label,
-  list,
-  fullWidth = false,
-}: InputBaseProps) => {
-  return (
-    <label
-      htmlFor={id}
-      className={`inline-flex flex-col ${fullWidth ? 'w-full' : ''}`}
-    >
-      <span className="">{label}</span>
-      <input
-        list={list}
-        onChange={e => onChange(e.target.value)}
-        value={value}
-        type={type}
-        className="px-4 py-2 transition bg-gray-200 rounded-md dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-800 dark:focus:bg-gray-800 focus:bg-gray-300 focus:outline-none ring-feli focus:ring-3"
-        id={id}
-        placeholder={placeholder}
-        disabled={disabled}
-      />
-    </label>
-  );
-};
+const InputBase = forwardRef<HTMLInputElement, InputBaseProps>(
+  (
+    {
+      onChange = () => {},
+      value,
+      type,
+      id,
+      placeholder,
+      disabled,
+      label,
+      list,
+      fullWidth = false,
+    },
+    ref
+  ) => {
+    return (
+      <label
+        htmlFor={id}
+        className={`inline-flex flex-col ${fullWidth ? 'w-full' : ''}`}
+      >
+        <span className="">{label}</span>
+        <input
+          list={list}
+          onChange={e => onChange(e.target.value)}
+          value={value}
+          type={type}
+          className="px-4 py-2 transition bg-gray-200 rounded-md dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-800 dark:focus:bg-gray-800 focus:bg-gray-300 focus:outline-none ring-feli focus:ring-3"
+          id={id}
+          placeholder={placeholder}
+          disabled={disabled}
+          ref={ref}
+        />
+      </label>
+    );
+  }
+);
 
 export default InputBase;
