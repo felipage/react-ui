@@ -14,7 +14,7 @@ export const Dialogs = () => {
 };
 
 const App = () => {
-  const { showAlertDialog, showConfirmDialog, showPromptDialog } = useDialog();
+  const { showAlertDialog, showConfirmDialog, showPromptDialog } = useDialog()!;
 
   const alert = async () => {
     await showAlertDialog({ children: 'This is an alert' });
@@ -25,7 +25,10 @@ const App = () => {
   };
 
   const prompt = async () => {
-    await showPromptDialog({ children: 'This is a prompt' });
+    await showPromptDialog({
+      children: 'This is a prompt',
+      initialValue: 'Initial Value',
+    });
   };
 
   return (
