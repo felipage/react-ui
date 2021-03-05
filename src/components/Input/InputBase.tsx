@@ -38,7 +38,7 @@ const InputBase = forwardRef<HTMLInputElement, InputBaseProps>(
           onChange={e => onChange(e.target.value)}
           value={value}
           type={type}
-          className="px-4 py-2 transition bg-gray-200 rounded-md dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-800 dark:focus:bg-gray-800 focus:bg-gray-300 focus:outline-none ring-feli focus:ring-3"
+          className="px-4 py-2 transition bg-gray-200 rounded-md dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-800 dark:focus:bg-gray-800 focus:bg-gray-300 focus:outline-none ring-feli focus:ring-3 overflow-ellipsis"
           id={id}
           placeholder={placeholder}
           disabled={disabled}
