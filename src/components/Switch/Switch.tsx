@@ -2,12 +2,16 @@ import React, { ReactNode, useEffect, useState } from 'react';
 import { Underlay } from '../Underlay';
 
 export interface SwitchProps {
-  onChange: (value: boolean) => void;
+  onChange?: (value: boolean) => void;
   label?: ReactNode;
-  checked: boolean;
+  checked?: boolean;
 }
 
-const Switch = ({ onChange = () => {}, label, checked }: SwitchProps) => {
+const Switch = ({
+  onChange = () => {},
+  label = '',
+  checked = false,
+}: SwitchProps) => {
   const [fChecked, fSetChecked] = useState(false);
 
   useEffect(() => {

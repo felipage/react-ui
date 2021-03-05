@@ -5,13 +5,13 @@ import { Underlay } from '../Underlay';
 type sizes = 'small' | 'normal' | 'large';
 
 export interface CheckboxProps {
-  onChange: (value: boolean) => void;
+  onChange?: (value: boolean) => void;
   size?: sizes;
   label?: ReactNode;
 }
 
 const Checkbox = ({
-  onChange,
+  onChange = () => {},
   size = 'normal',
   label = 'Checkbox',
 }: CheckboxProps) => {

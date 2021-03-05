@@ -5,16 +5,14 @@ export interface RadioProps {
   onChange?: (checked: boolean) => void;
   checked?: boolean;
   name?: string;
-  label: ReactNode;
-  value: string;
+  label?: ReactNode;
 }
 
 const Radio = ({
   onChange = () => {},
   name,
   checked = false,
-  label,
-  value,
+  label = '',
 }: RadioProps) => {
   const [fChecked, fSetChecked] = useState(false);
 
@@ -37,7 +35,6 @@ const Radio = ({
       <input
         name={name}
         type="radio"
-        value={value}
         className="w-0 h-0 opacity-0"
         onChange={e => {
           const { checked } = e.target;
