@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { ReactNode, useState } from 'react';
 import { HiCheck } from 'react-icons/hi';
 import { Underlay } from '../Underlay';
 
@@ -6,8 +6,8 @@ type sizes = 'small' | 'normal' | 'large';
 
 export interface CheckboxProps {
   onChange: (value: boolean) => void;
-  size: sizes;
-  label?: string;
+  size?: sizes;
+  label?: ReactNode;
 }
 
 const Checkbox = ({
