@@ -20,11 +20,11 @@ const Checkbox = ({
     <label
       className={`inline-flex items-center focus-within:ring-3 transition-shadow rounded ring-feli pr-2 ${
         size === 'small'
-          ? 'text-base'
+          ? 'text-sm'
           : size === 'normal'
-          ? 'text-lg'
+          ? 'text-base'
           : size === 'large'
-          ? 'text-xl'
+          ? 'text-lg'
           : ''
       }`}
     >
