@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { ReactNode, useEffect, useState } from 'react';
 import { Underlay } from '../Underlay';
 
 export interface SwitchProps {
   onChange: (value: boolean) => void;
-  label?: string;
+  label?: ReactNode;
   checked: boolean;
 }
 
