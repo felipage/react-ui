@@ -15,8 +15,7 @@ const Switch = ({ onChange = () => {}, label, checked }: SwitchProps) => {
   }, [checked]);
 
   return (
-    <label className="inline-flex flex-row-reverse items-center pr-2 transition-shadow rounded focus-within:ring-3 ring-feli">
-      {label}
+    <label className="inline-flex items-center transition-shadow rounded focus-within:ring-3 ring-feli">
       <input
         type="checkbox"
         className="w-0 h-0 opacity-0 focus:outline-none"
@@ -26,6 +25,7 @@ const Switch = ({ onChange = () => {}, label, checked }: SwitchProps) => {
           fSetChecked(checked);
         }}
       ></input>
+      <span className="h-9"></span>
       <span
         className={`cursor-pointer relative w-7 h-3 mr-4 transition-colors rounded-full ${
           fChecked ? 'bg-feli-light' : 'bg-gray-400'
@@ -45,6 +45,7 @@ const Switch = ({ onChange = () => {}, label, checked }: SwitchProps) => {
           </Underlay>
         </span>
       </span>
+      <span>{label}</span>
     </label>
   );
 };
