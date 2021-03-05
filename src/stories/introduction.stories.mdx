@@ -1,8 +1,15 @@
-import { Meta } from '@storybook/addon-docs/blocks';
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import { Alert } from '../';
 
 <Meta title="Welcome" />
 
 # Feli Page UI
+
+<div className="rounded overflow-hidden shadow-lg">
+  <Alert fixed={false} colour="green">
+    <code>@felipage/react-ui</code> is still under development
+  </Alert>
+</div>
 
 **@felipage/react-ui** is a React Component Library built for [feli.page](https://feli.page) websites
 
