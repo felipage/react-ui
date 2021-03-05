@@ -18,7 +18,7 @@ const Checkbox = ({
   const [checked, setChecked] = useState(false);
   return (
     <label
-      className={`inline-flex flex-row-reverse items-center focus-within:ring-3 transition-shadow rounded ring-feli pr-2 ${
+      className={`inline-flex items-center focus-within:ring-3 transition-shadow rounded ring-feli pr-2 ${
         size === 'small'
           ? 'text-base'
           : size === 'normal'
@@ -28,7 +28,6 @@ const Checkbox = ({
           : ''
       }`}
     >
-      <span className="ml-2">{label}</span>
       <input
         type="checkbox"
         className="w-0 h-0 opacity-0 focus:outline-none"
@@ -67,6 +66,7 @@ const Checkbox = ({
           )}
         </span>
       </Underlay>
+      <span className="ml-2">{label}</span>
     </label>
   );
 };
