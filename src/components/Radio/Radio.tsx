@@ -21,7 +21,7 @@ const Radio = ({
   }, [checked]);
 
   return (
-    <label className="inline-flex items-center rounded focus-within:ring-3 ring-feli">
+    <label className="inline-flex items-center transition-shadow rounded focus-within:ring-3 ring-feli">
       <Underlay>
         <span
           className={`w-6 h-6 rounded-full transition ${
