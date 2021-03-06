@@ -30,6 +30,7 @@ const RadioGroup = ({
         const { value, label } = option;
         return (
           <Radio
+            key={value}
             name={name}
             checked={fSelectedValue === value}
             onChange={checked => checked && handleChange(value)}
