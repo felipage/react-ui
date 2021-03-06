@@ -13,3 +13,4 @@ export * from './Dialog';
 export * from './Select';
 export * from './Underlay';
 export * from './Slider';
+export * from './ListTile';
