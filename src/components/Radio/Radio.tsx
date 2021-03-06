@@ -22,15 +22,17 @@ const Radio = ({
 
   return (
     <label className="inline-flex items-center transition-shadow rounded focus-within:ring-3 ring-feli">
-      <Underlay>
-        <span
-          className={`w-6 h-6 rounded-full transition ${
-            fChecked
-              ? 'bg-feli ring-inset ring-3 ring-white dark:ring-black ring-offset-2 ring-offset-feli'
-              : 'bg-white dark:bg-black ring-inset ring-3 ring-white dark:ring-black ring-offset-2 ring-offset-gray-500'
-          }`}
-        ></span>
-      </Underlay>
+      <span className="cursor-pointer">
+        <Underlay>
+          <span
+            className={`w-6 h-6 rounded-full transition ${
+              fChecked
+                ? 'bg-feli ring-inset ring-3 ring-white dark:ring-black ring-offset-2 ring-offset-feli'
+                : 'bg-white dark:bg-black ring-inset ring-3 ring-white dark:ring-black ring-offset-2 ring-offset-gray-500'
+            }`}
+          ></span>
+        </Underlay>
+      </span>
       <span className="pr-2 ml-2">{label}</span>
       <input
         name={name}
