@@ -2,11 +2,11 @@ import React, { ReactNode } from 'react';
 import { IconType } from 'react-icons';
 
 export interface AppBarProps {
-  title: string;
+  title?: string;
   Icon?: IconType;
   actions?: ReactNode;
   onTitleClick?: () => void;
-  titleHref: string;
+  titleHref?: string;
 }
 
 const AppBar = ({
