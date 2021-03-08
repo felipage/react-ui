@@ -1,6 +1,6 @@
 import React, { forwardRef, ReactNode } from 'react';
 
-export interface InputBaseProps {
+export interface TextFieldBaseProps {
   onChange?: (value: string) => void;
   value?: string;
   type?: string;
@@ -12,7 +12,7 @@ export interface InputBaseProps {
   fullWidth?: boolean;
 }
 
-const InputBase = forwardRef<HTMLInputElement, InputBaseProps>(
+const TextFieldBase = forwardRef<HTMLInputElement, TextFieldBaseProps>(
   (
     {
       onChange = () => {},
@@ -49,4 +49,4 @@ const InputBase = forwardRef<HTMLInputElement, InputBaseProps>(
   }
 );
 
-export default InputBase;
+export default TextFieldBase;

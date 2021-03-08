@@ -1,21 +1,21 @@
-import SlowInput, { SlowInputProps } from './SlowInput';
+import TextFieldBase, { TextFieldBaseProps } from './TextFieldBase';
 import React from 'react';
 
-export interface SlowDropdownInputProps extends SlowInputProps {
+export interface DropdownTextFieldProps extends TextFieldBaseProps {
   options: string[];
   id: string;
 }
 
-const SlowDropdownInput = ({
+const DropdownTextField = ({
   options = [],
   id,
   ...rest
-}: SlowDropdownInputProps) => {
+}: DropdownTextFieldProps) => {
   const datalistId = `${id}-list`;
 
   return (
     <>
-      <SlowInput {...rest} list={datalistId} id={id} />
+      <TextFieldBase {...rest} list={datalistId} id={id} />
       <datalist id={datalistId}>
         {options.map(option => (
           <option key={option}>{option}</option>
@@ -25,4 +25,4 @@ const SlowDropdownInput = ({
   );
 };
 
-export default SlowDropdownInput;
+export default DropdownTextField;

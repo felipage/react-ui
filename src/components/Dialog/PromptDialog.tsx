@@ -1,6 +1,6 @@
 import React, { ReactNode, useEffect, useRef, useState } from 'react';
 import Button from '../Button/Button';
-import { Input } from '../Input';
+import { TextField } from '../TextField';
 import Dialog, { DialogProps } from './Dialog';
 import DialogActions from './DialogActions';
 import DialogContent from './DialogContent';
@@ -39,7 +39,7 @@ const PromptDialog = ({
     <Dialog onClose={() => onClose(initialValue)} open={open} {...rest}>
       <DialogTitle>{title}</DialogTitle>
       <DialogContent>
-        <Input
+        <TextField
           label={children}
           value={input}
           onChange={setInput}

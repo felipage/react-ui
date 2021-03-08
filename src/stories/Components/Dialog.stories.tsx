@@ -9,7 +9,7 @@ import {
   AlertDialog,
   Button,
   PromptDialog,
-  Input,
+  TextField,
   ConfirmDialog,
   DialogProps,
   AlertDialogProps,
@@ -49,7 +49,7 @@ Default.args = {
         <h1>Dialog Title</h1>
       </DialogTitle>
       <DialogContent>
-        <Input label="Name" />
+        <TextField label="Name" />
       </DialogContent>
       <DialogActions>
         <Button>Cancel</Button>

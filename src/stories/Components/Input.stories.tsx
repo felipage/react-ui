@@ -1,20 +1,20 @@
 import StoryWrap from '../StoryWrap';
 import {
-  DropdownInput,
-  Input,
-  SlowDropdownInput,
-  SlowInput,
-  DropdownInputProps,
-  InputProps,
-  SlowDropdownInputProps,
-  SlowInputProps,
+  DropdownTextField,
+  TextField,
+  SlowDropdownTextField,
+  SlowTextField,
+  DropdownTextFieldProps,
+  TextFieldProps,
+  SlowDropdownTextFieldProps,
+  SlowTextFieldProps,
 } from '../..';
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
 
 export default {
-  title: 'Components/Input',
-  component: Input,
+  title: 'Components/Text Field',
+  component: TextField,
   decorators: [
     (Story: any) => (
       <StoryWrap>
@@ -24,13 +24,15 @@ export default {
   ],
 } as Meta;
 
-const Template: Story<InputProps> = args => <Input {...args} />;
-const SlowTemplate: Story<SlowInputProps> = args => <SlowInput {...args} />;
-const DropdownTemplate: Story<DropdownInputProps> = args => (
-  <DropdownInput {...args} />
+const Template: Story<TextFieldProps> = args => <TextField {...args} />;
+const SlowTemplate: Story<SlowTextFieldProps> = args => (
+  <SlowTextField {...args} />
 );
-const SlowDropdownTemplate: Story<SlowDropdownInputProps> = args => (
-  <SlowDropdownInput {...args} />
+const DropdownTemplate: Story<DropdownTextFieldProps> = args => (
+  <DropdownTextField {...args} />
+);
+const SlowDropdownTemplate: Story<SlowDropdownTextFieldProps> = args => (
+  <SlowDropdownTextField {...args} />
 );
 
 export const Default = Template.bind({});
@@ -48,7 +50,7 @@ Slow.args = {
 export const Dropdown = DropdownTemplate.bind({});
 Dropdown.args = {
   ...Default.args,
-  id: 'dropdown-input-demo',
+  id: 'dropdown-textField-demo',
   options: [
     'Option One',
     'Option Two',

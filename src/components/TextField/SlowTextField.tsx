@@ -1,10 +1,14 @@
-import InputBase, { InputBaseProps } from './InputBase';
+import TextFieldBase, { TextFieldBaseProps } from './TextFieldBase';
 import React from 'react';
 import { useEffect, useState } from 'react';
 
-export interface SlowInputProps extends InputBaseProps {}
+export interface SlowTextFieldProps extends TextFieldBaseProps {}
 
-const SlowInput = ({ value, onChange = () => {}, ...rest }: SlowInputProps) => {
+const SlowTextField = ({
+  value,
+  onChange = () => {},
+  ...rest
+}: SlowTextFieldProps) => {
   const [localValue, setLocalValue] = useState('');
 
   useEffect(() => {
@@ -18,7 +22,9 @@ const SlowInput = ({ value, onChange = () => {}, ...rest }: SlowInputProps) => {
     setLocalValue(value);
   };
 
-  return <InputBase onChange={onValueChange} value={localValue} {...rest} />;
+  return (
+    <TextFieldBase onChange={onValueChange} value={localValue} {...rest} />
+  );
 };
 
-export default SlowInput;
+export default SlowTextField;

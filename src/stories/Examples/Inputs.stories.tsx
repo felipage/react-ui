@@ -4,7 +4,7 @@ import {
   Button,
   AppBar,
   Content,
-  SlowDropdownInput,
+  SlowDropdownTextField,
   CheckboxGroup,
   RadioGroup,
   SwitchGroup,
@@ -41,7 +41,7 @@ const App = () => {
       <Content>
         <h1 className="mt-3">About me</h1>
         <div className="mt-3">
-          <SlowDropdownInput
+          <SlowDropdownTextField
             options={countryNames}
             id="country_input"
             label="I am from"
