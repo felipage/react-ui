@@ -21,11 +21,13 @@ const AppBar = ({
       <div className="flex items-center justify-between w-full max-w-6xl">
         <a
           onClick={onTitleClick}
-          className="flex items-center justify-start space-x-3 text-gray-900 transition-shadow rounded focus:outline-none focus:ring-3 ring-feli dark:text-gray-50"
+          className="flex items-center justify-start space-x-3 overflow-hidden text-gray-900 transition-shadow rounded overflow-ellipsis focus:outline-none focus:ring-3 ring-feli dark:text-gray-50"
           href={titleHref}
         >
           {Icon && <Icon size={28} />}
-          <span className="text-xl font-bold">{title}</span>
+          <span className="block overflow-hidden text-xl font-bold whitespace-nowrap overflow-ellipsis">
+            {title}
+          </span>
         </a>
         <div className="flex space-x-2">{actions}</div>
       </div>
