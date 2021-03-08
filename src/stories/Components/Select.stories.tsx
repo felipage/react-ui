@@ -16,8 +16,8 @@ export default {
 } as Meta;
 
 const Template: Story<SelectProps> = args => <Select {...args} />;
-export const Default = Template.bind({});
-Default.args = {
+export const $Select = Template.bind({});
+$Select.args = {
   label: 'Select',
   placeholder: 'test',
   children: (

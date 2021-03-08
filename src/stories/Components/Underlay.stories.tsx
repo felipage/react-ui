@@ -17,7 +17,7 @@ export default {
 
 const Template: Story<UnderlayProps> = args => <Underlay {...args} />;
 
-export const Default = Template.bind({});
-Default.args = {
+export const $Underlay = Template.bind({});
+$Underlay.args = {
   size: 'normal',
 };

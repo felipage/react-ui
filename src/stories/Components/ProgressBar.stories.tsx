@@ -22,7 +22,7 @@ export default {
 
 const Template: Story<ProgressBarProps> = args => <ProgressBar {...args} />;
 
-export const Default = Template.bind({});
-Default.args = {
+export const $ProgressBar = Template.bind({});
+$ProgressBar.args = {
   label: 'Downloading',
 };

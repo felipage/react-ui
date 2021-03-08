@@ -17,8 +17,8 @@ export default {
 
 const Template: Story<SwitchProps> = args => <Switch {...args} />;
 
-export const Default = Template.bind({});
-Default.args = {
+export const $Switch = Template.bind({});
+$Switch.args = {
   label: 'Label',
   checked: false,
 };

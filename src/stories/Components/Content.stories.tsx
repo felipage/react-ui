@@ -9,8 +9,8 @@ export default {
 
 const Template: Story<ContentProps> = args => <Content {...args} />;
 
-export const Default = Template.bind({});
-Default.args = {
+export const $Content = Template.bind({});
+$Content.args = {
   children: (
     <div className="flex items-center justify-center w-full h-32 text-white bg-indigo-600">
       Content

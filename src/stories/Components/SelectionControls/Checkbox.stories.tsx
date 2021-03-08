@@ -17,7 +17,7 @@ export default {
 
 const Template: Story<CheckboxProps> = args => <Checkbox {...args} />;
 
-export const Default = Template.bind({});
-Default.args = {
+export const $Checkbox = Template.bind({});
+$Checkbox.args = {
   size: 'normal',
 };

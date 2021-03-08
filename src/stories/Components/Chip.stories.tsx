@@ -17,7 +17,7 @@ export default {
 
 const Template: Story<ChipProps> = args => <Chip {...args} />;
 
-export const Default = Template.bind({});
-Default.args = {
+export const $Chip = Template.bind({});
+$Chip.args = {
   children: 'Chip',
 };
