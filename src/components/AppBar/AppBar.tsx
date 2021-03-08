@@ -24,7 +24,11 @@ const AppBar = ({
           className="flex items-center justify-start space-x-3 overflow-hidden text-gray-900 transition-shadow rounded overflow-ellipsis focus:outline-none focus:ring-3 ring-feli dark:text-gray-50"
           href={titleHref}
         >
-          {Icon && <Icon size={28} />}
+          {Icon && (
+            <span className="w-7 h-7">
+              <Icon size={28} />
+            </span>
+          )}
           <span className="block overflow-hidden text-xl font-bold whitespace-nowrap overflow-ellipsis">
             {title}
           </span>
