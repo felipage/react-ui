@@ -4,7 +4,7 @@ import { Meta, Story } from '@storybook/react';
 import React from 'react';
 
 export default {
-  title: 'Components/Select',
+  title: 'Components/Inputs/Select',
   component: Select,
   decorators: [
     (Story: any) => (

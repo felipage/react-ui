@@ -4,7 +4,7 @@ import { Meta, Story } from '@storybook/react';
 import React from 'react';
 
 export default {
-  title: 'Components/Selection Control/Checkbox',
+  title: 'Components/Inputs/Checkbox',
   component: Checkbox,
   decorators: [
     (Story: any) => (
