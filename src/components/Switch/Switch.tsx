@@ -1,4 +1,5 @@
 import React, { ReactNode, useEffect, useState } from 'react';
+import { Thumb } from '../Thumb';
 import { Underlay } from '../Underlay';
 
 export interface SwitchProps {
@@ -19,7 +20,7 @@ const Switch = ({
   }, [checked]);
 
   return (
-    <label className="inline-flex items-center transition-shadow rounded focus-within:ring-3 ring-feli">
+    <label className="inline-flex items-center pr-2 transition-shadow rounded focus-within:ring-3 ring-feli">
       <input
         type="checkbox"
         className="w-0 h-0 opacity-0 focus:outline-none"
@@ -41,11 +42,7 @@ const Switch = ({
           }`}
         >
           <Underlay>
-            <span
-              className={`flex items-center justify-center w-5 h-5 transition rounded-full shadow ${
-                fChecked ? 'bg-feli' : 'bg-white'
-              }`}
-            ></span>
+            <Thumb active={fChecked} />
           </Underlay>
         </span>
       </span>
