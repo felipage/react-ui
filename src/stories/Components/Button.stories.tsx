@@ -1,5 +1,5 @@
 import StoryWrap from '../StoryWrap';
-import { Button, ButtonProps } from '../..';
+import { Button, ButtonProps, FlatButton, FlatButtonProps } from '../..';
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
 
@@ -19,12 +19,19 @@ export default {
 } as Meta;
 
 const Template: Story<ButtonProps> = args => <Button {...args} />;
+const FlatTemplate: Story<FlatButtonProps> = args => <FlatButton {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
   children: 'Button',
   colour: 'default',
   size: 'normal',
+};
+
+export const Flat = FlatTemplate.bind({});
+Flat.args = {
+  ...Default.args,
+  children: 'Delete',
 };
 
 export const Red = Template.bind({});
