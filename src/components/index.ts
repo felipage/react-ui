@@ -15,3 +15,4 @@ export * from './Underlay';
 export * from './Slider';
 export * from './ListTile';
 export * from './Thumb';
+export * from './Tooltip';
