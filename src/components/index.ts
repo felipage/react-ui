@@ -17,3 +17,4 @@ export * from './ListTile';
 export * from './Thumb';
 export * from './Tooltip';
 export * from './IconButton';
+export * from './Snackbar';
