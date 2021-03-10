@@ -1,8 +1,8 @@
 import StoryWrap from '../StoryWrap';
-import { ListTile, ListTileProps } from '../..';
+import { ListTile, ListTileProps, IconButton } from '../..';
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
-import { FaCloudRain } from 'react-icons/fa';
+import { FaCloud, FaCloudRain } from 'react-icons/fa';
 import { HiPencil } from 'react-icons/hi';
 
 export default {
@@ -25,5 +25,5 @@ $ListTile.args = {
   subtitle:
     'Rainy Rainy Rainy Rainy Rainy Rainy Rainy Rainy Rainy Rainy Rainy Rainy Rainy Rainy Rainy Rainy Rainy Rainy Rainy Rainy Rainy Rainy Rainy Rainy Rainy Rainy Rainy Rainy Rainy Rainy Rainy Rainy Rainy',
   Leading: <FaCloudRain size={24} />,
-  Trailing: <HiPencil size={24} />,
+  Trailing: <IconButton Icon={HiPencil} />,
 };
