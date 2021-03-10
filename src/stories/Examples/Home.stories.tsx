@@ -7,6 +7,9 @@ import {
   AlertDialog,
   ConfirmDialog,
   PromptDialog,
+  FlatButton,
+  SnackbarProvider,
+  useSnackbar,
 } from '../..';
 
 export default {
@@ -14,12 +17,21 @@ export default {
 };
 
 export const Home = () => {
+  return (
+    <SnackbarProvider>
+      <App />
+    </SnackbarProvider>
+  );
+};
+
+const App = () => {
   const [usernameDialogOpen, setUsernameDialogOpen] = useState(false);
   const [username, setUsername] = useState('feli.page');
   const [alertMessage, setAlertMessage] = useState('');
   const [alertDialogOpen, setAlertDialogOpen] = useState(false);
   const [confirmMessage, setConfirmMessage] = useState('');
   const [confirmDialogOpen, setConfirmDialogOpen] = useState(false);
+  const { showSnackbar } = useSnackbar()!;
 
   const onUsernameUpdate = (newUsername: string) => {
     setUsernameDialogOpen(false);
@@ -43,6 +55,12 @@ export const Home = () => {
       setAlertMessage('Account Deleted');
       setAlertDialogOpen(true);
     }
+  };
+
+  const showDemoSnackbar = () => {
+    showSnackbar({
+      children: 'hello',
+    });
   };
 
   return (
@@ -69,6 +87,9 @@ export const Home = () => {
           <Button onClick={() => deleteAccount()} colour="red">
             Delete Account
           </Button>
+        </div>
+        <div className="mt-3">
+          <FlatButton onClick={showDemoSnackbar}>Show snackbar</FlatButton>
         </div>
       </Content>
       <PromptDialog
