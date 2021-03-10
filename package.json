@@ -29,8 +29,10 @@
     "postdeploy": "cp .CNAME storybook-static/CNAME",
     "deploy-storybook": "npm run deploy && gh-pages -d storybook-static"
   },
+  "dependencies": {
+    "framer-motion": "^3.9.1"
+  },
   "peerDependencies": {
-    "framer-motion": "^3.9.1",
     "react": "^17.0.1",
     "react-icons": "^4.2.0"
   },
@@ -76,7 +78,6 @@
     "babel-loader": "^8.2.2",
     "countries-list": "^2.6.1",
     "faker": "^5.4.0",
-    "framer-motion": "^3.9.1",
     "gh-pages": "^3.1.0",
     "husky": "^5.1.2",
     "postcss": "^8.2.6",
