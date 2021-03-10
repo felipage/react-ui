@@ -14,7 +14,7 @@ npm install @felipage/react-ui @felipage/tailwind-feli
 
 ## Setup
 
-Modify tailwind.config.js
+Modify `tailwind.config.js`
 
 ```js
 module.exports = {
