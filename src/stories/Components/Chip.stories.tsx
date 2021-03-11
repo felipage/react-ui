@@ -13,6 +13,9 @@ export default {
       </StoryWrap>
     ),
   ],
+  argTypes: {
+    onClick: { action: 'click' },
+  },
 } as Meta;
 
 const Template: Story<ChipProps> = args => <Chip {...args} />;
