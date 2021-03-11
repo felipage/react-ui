@@ -1,5 +1,8 @@
 # Feli Page UI (React)
 
+![GitHub Actions Status](https://img.shields.io/github/workflow/status/felipage/react-ui/CI)
+![NPM Version](https://img.shields.io/npm/v/@felipage/react-ui)
+
 Feli Page's React Component Library
 
 [Storybook](https://ui.feli.page/)
