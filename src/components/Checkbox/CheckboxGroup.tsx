@@ -28,7 +28,7 @@ const CheckboxGroup = ({
         .filter(option => option.checked)
         .map(option => option.value)
     );
-  }, [fSelectedValues]);
+  }, [fSelectedValues, onChange]);
 
   const handleChange = (value: string, checked: boolean) => {
     console.log({ value, checked });
