@@ -22,7 +22,14 @@ export default {
 
 const Template: Story<ProgressBarProps> = args => <ProgressBar {...args} />;
 
-export const $ProgressBar = Template.bind({});
-$ProgressBar.args = {
+export const $Determinate = Template.bind({});
+$Determinate.args = {
   label: 'Downloading',
+  progress: 0,
+};
+
+export const $Indeterminate = Template.bind({});
+$Indeterminate.args = {
+  label: 'Downloading',
+  progress: undefined,
 };
