@@ -2,7 +2,7 @@ import StoryWrap from '../StoryWrap';
 import { ListTile, ListTileProps, IconButton } from '../..';
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
-import { FaCloud, FaCloudRain } from 'react-icons/fa';
+import { FaCloudRain } from 'react-icons/fa';
 import { HiPencil } from 'react-icons/hi';
 
 export default {
