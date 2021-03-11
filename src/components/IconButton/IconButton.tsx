@@ -7,7 +7,7 @@ import { Underlay } from '../Underlay';
 export interface IconButtonProps
   extends Omit<HTMLProps<HTMLButtonElement>, 'ref'> {
   Icon: IconType;
-  type: 'button' | 'submit' | 'reset' | undefined;
+  type?: 'button' | 'submit' | 'reset' | undefined;
 }
 
 const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(

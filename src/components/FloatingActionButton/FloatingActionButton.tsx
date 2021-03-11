@@ -7,7 +7,7 @@ export interface FloatingActionButtonProps
   extends Omit<HTMLProps<HTMLButtonElement>, 'ref' | 'size'> {
   Icon: IconType;
   size: sizes;
-  type: 'button' | 'submit' | 'reset' | undefined;
+  type?: 'button' | 'submit' | 'reset' | undefined;
 }
 
 const FloatingActionButton = forwardRef<
