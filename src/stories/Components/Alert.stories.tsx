@@ -9,8 +9,8 @@ export default {
 
 const Template: Story<AlertProps> = args => <Alert {...args} />;
 
-export const Default = Template.bind({});
-Default.args = {
+export const $Alert = Template.bind({});
+$Alert.args = {
   children: "Feli Page's React Component Library",
   colour: 'default',
   fixed: false,
