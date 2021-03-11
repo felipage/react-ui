@@ -1,21 +1,20 @@
 import SlowTextField, { SlowTextFieldProps } from './SlowTextField';
-import React from 'react';
+import React, { forwardRef } from 'react';
 
 export interface SlowDropdownTextFieldProps extends SlowTextFieldProps {
   options: string[];
   id: string;
 }
 
-const SlowDropdownTextField = ({
-  options = [],
-  id,
-  ...rest
-}: SlowDropdownTextFieldProps) => {
+const SlowDropdownTextField = forwardRef<
+  HTMLInputElement,
+  SlowDropdownTextFieldProps
+>(({ options = [], id, ...rest }: SlowDropdownTextFieldProps, ref) => {
   const datalistId = `${id}-list`;
 
   return (
     <>
-      <SlowTextField {...rest} list={datalistId} id={id} />
+      <SlowTextField list={datalistId} id={id} ref={ref} {...rest} />
       <datalist id={datalistId}>
         {options.map(option => (
           <option key={option}>{option}</option>
@@ -23,6 +22,6 @@ const SlowDropdownTextField = ({
       </datalist>
     </>
   );
-};
+});
 
 export default SlowDropdownTextField;
