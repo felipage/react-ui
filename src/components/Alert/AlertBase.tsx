@@ -1,6 +1,6 @@
 import React, { forwardRef, HTMLProps } from 'react';
 
-export interface AlertBaseProps extends HTMLProps<HTMLDivElement> {
+export interface AlertBaseProps extends Omit<HTMLProps<HTMLDivElement>, 'ref'> {
   fixed?: boolean;
 }
 
