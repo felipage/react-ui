@@ -20,6 +20,5 @@ const Template: Story<IconButtonProps> = args => <IconButton {...args} />;
 
 export const $IconButton = Template.bind({});
 $IconButton.args = {
-  size: 'normal',
   Icon: HiOutlinePlus,
 };
