@@ -15,21 +15,3 @@ Default.args = {
   colour: 'default',
   fixed: false,
 };
-
-export const Fixed = Template.bind({});
-Fixed.args = {
-  ...Default.args,
-  fixed: true,
-};
-
-export const Red = Template.bind({});
-Red.args = {
-  ...Default.args,
-  colour: 'red',
-};
-
-export const Green = Template.bind({});
-Green.args = {
-  ...Default.args,
-  colour: 'green',
-};
