@@ -18,9 +18,9 @@ const FloatingActionButton = ({
     <button
       className={`flex items-center justify-center transition rounded-full bg-feli hover:bg-feli-light active:bg-feli-lighter focus:outline-none ring-feli ring-offset-white hover:shadow-lg active:shadow-md ${
         size === 'small'
-          ? 'w-10 h-10 focus:ring-4 ring-offset-2'
+          ? 'w-10 h-10 focus:ring-3 ring-offset-1.5'
           : size === 'normal'
-          ? 'w-14 h-14 focus:ring-6 ring-offset-3'
+          ? 'w-14 h-14 focus:ring-5 ring-offset-2.5'
           : ''
       }`}
       onClick={onClick}
