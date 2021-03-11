@@ -1,32 +1,14 @@
-import React, { forwardRef, ReactNode } from 'react';
+import React, { forwardRef, HTMLProps, ReactNode } from 'react';
 
-export interface TextFieldBaseProps {
+export interface TextFieldBaseProps
+  extends Omit<HTMLProps<HTMLInputElement>, 'ref' | 'onChange' | 'label'> {
   onChange?: (value: string) => void;
-  value?: string;
-  type?: string;
-  id?: string;
-  placeholder?: string;
-  disabled?: boolean;
   label?: ReactNode;
-  list?: string;
   fullWidth?: boolean;
 }
 
 const TextFieldBase = forwardRef<HTMLInputElement, TextFieldBaseProps>(
-  (
-    {
-      onChange = () => {},
-      value,
-      type,
-      id,
-      placeholder,
-      disabled,
-      label,
-      list,
-      fullWidth = false,
-    },
-    ref
-  ) => {
+  ({ onChange = () => {}, id, label, fullWidth = false, ...rest }, ref) => {
     return (
       <label
         htmlFor={id}
@@ -34,15 +16,11 @@ const TextFieldBase = forwardRef<HTMLInputElement, TextFieldBaseProps>(
       >
         <span className="">{label}</span>
         <input
-          list={list}
           onChange={e => onChange(e.target.value)}
-          value={value}
-          type={type}
           className="px-4 py-2 transition bg-gray-200 rounded-md dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-800 dark:focus:bg-gray-800 focus:bg-gray-300 focus:outline-none ring-feli focus:ring-3 overflow-ellipsis"
           id={id}
-          placeholder={placeholder}
-          disabled={disabled}
           ref={ref}
+          {...rest}
         />
       </label>
     );
