@@ -1,18 +1,21 @@
-import FlatButtonBase, { buttonSizes } from './ButtonBase';
-import React, { ReactNode } from 'react';
+import FlatButtonBase, { ButtonBaseProps } from './ButtonBase';
+import React, { forwardRef } from 'react';
 
-export interface FlatButtonProps {
-  children: ReactNode;
-  onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
-  size?: buttonSizes;
-}
+export interface FlatButtonProps extends ButtonBaseProps {}
 
-const FlatButton = ({ children, onClick, size }: FlatButtonProps) => {
-  return (
-    <FlatButtonBase size={size} onClick={onClick} className="text-feli">
-      {children}
-    </FlatButtonBase>
-  );
-};
+const FlatButton = forwardRef<HTMLButtonElement, FlatButtonProps>(
+  ({ children, onClick, size }: FlatButtonProps, ref) => {
+    return (
+      <FlatButtonBase
+        size={size}
+        onClick={onClick}
+        className="text-feli"
+        ref={ref}
+      >
+        {children}
+      </FlatButtonBase>
+    );
+  }
+);
 
 export default FlatButton;
