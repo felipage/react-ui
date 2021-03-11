@@ -1,7 +1,7 @@
 import AlertBase, { AlertBaseProps } from './AlertBase';
 import React, { forwardRef } from 'react';
 
-type colours = 'red' | 'green' | 'default';
+type colours = 'red' | 'green' | 'yellow' | 'default';
 
 export interface AlertProps extends AlertBaseProps {
   colour?: colours;
@@ -18,6 +18,8 @@ const Alert = forwardRef<HTMLDivElement, AlertProps>(
             ? 'text-green-700 bg-green-400 dark:bg-green-900 dark:text-green-200'
             : colour === 'red'
             ? 'text-red-700 bg-red-400 dark:bg-red-900 dark:text-red-200'
+            : colour === 'yellow'
+            ? 'text-yellow-700 bg-yellow-400 dark:bg-yellow-900 dark:text-yellow-200'
             : ''
         }
         ref={ref}
