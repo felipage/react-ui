@@ -23,14 +23,8 @@ const Template: Story<FloatingActionButtonProps> = args => (
   <FloatingActionButton {...args} />
 );
 
-export const Default = Template.bind({});
-Default.args = {
+export const $FloatingActionButton = Template.bind({});
+$FloatingActionButton.args = {
   Icon: HiOutlinePlus,
   size: 'normal',
-};
-
-export const Small = Template.bind({});
-Small.args = {
-  ...Default.args,
-  size: 'small',
 };
