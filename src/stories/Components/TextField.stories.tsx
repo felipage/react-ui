@@ -44,7 +44,7 @@ Default.args = {
 
 export const Slow = SlowTemplate.bind({});
 Slow.args = {
-  ...Default.args,
+  ...(Default.args as any),
 };
 
 export const Dropdown = DropdownTemplate.bind({});
@@ -63,5 +63,5 @@ Dropdown.args = {
 
 export const SlowDropdown = SlowDropdownTemplate.bind({});
 SlowDropdown.args = {
-  ...Dropdown.args,
+  ...(Dropdown.args as any),
 };
