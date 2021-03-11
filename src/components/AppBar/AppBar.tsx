@@ -15,7 +15,7 @@ const AppBar = forwardRef<HTMLElement, AppBarProps>(
       title,
       actions = [],
       Icon,
-      onTitleClick = () => {},
+      onTitleClick,
       titleHref,
       ...rest
     }: AppBarProps,
@@ -30,7 +30,9 @@ const AppBar = forwardRef<HTMLElement, AppBarProps>(
         <div className="flex items-center justify-between w-full max-w-6xl">
           <a
             onClick={onTitleClick}
-            className="flex items-center justify-start space-x-3 overflow-hidden text-gray-900 transition-shadow rounded overflow-ellipsis focus:outline-none focus:ring-3 ring-feli dark:text-gray-50"
+            className={`flex items-center justify-start space-x-3 overflow-hidden text-gray-900 transition-shadow rounded overflow-ellipsis focus:outline-none focus:ring-3 ring-feli dark:text-gray-50 ${
+              onTitleClick ? 'cursor-pointer' : ''
+            }`}
             href={titleHref}
           >
             {Icon && (
