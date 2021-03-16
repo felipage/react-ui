@@ -10,6 +10,9 @@ import {
   FlatButton,
   SnackbarProvider,
   useSnackbar,
+  Footer,
+  FooterGroup,
+  FooterLink,
 } from '../..';
 
 export default {
@@ -92,6 +95,18 @@ const App = () => {
           <FlatButton onClick={showDemoSnackbar}>Show snackbar</FlatButton>
         </div>
       </Content>
+      <Footer>
+        <FooterGroup label="Legal">
+          <FooterLink>Privacy</FooterLink>
+          <FooterLink>Terms</FooterLink>
+        </FooterGroup>
+        <FooterGroup label="Feli Page">
+          <FooterLink href="https://nexttrain.feli.page">Next Train</FooterLink>
+          <FooterLink href="https://dictionary.feli.page">
+            Dictionary
+          </FooterLink>
+        </FooterGroup>
+      </Footer>
       <PromptDialog
         title="Update your Profile"
         open={usernameDialogOpen}
