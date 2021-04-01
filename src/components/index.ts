@@ -19,3 +19,5 @@ export * from './Tooltip';
 export * from './IconButton';
 export * from './Snackbar';
 export * from './Footer';
+export * from './SideBar';
+export * from './Divider';
