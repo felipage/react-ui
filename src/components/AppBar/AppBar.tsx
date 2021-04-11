@@ -47,7 +47,13 @@ const AppBar = forwardRef<HTMLElement, AppBarProps>(
           >
             {useMenu && (
               <div className="z-10 md:hidden">
-                <IconButton Icon={MenuIcon} onClick={onMenuIconClick} />
+                <IconButton
+                  Icon={MenuIcon}
+                  onClick={e => {
+                    e.stopPropagation();
+                    onMenuIconClick && onMenuIconClick();
+                  }}
+                />
               </div>
             )}
             {Icon && (

@@ -125,6 +125,7 @@ const App = () => {
               Icon={UserIcon}
               title="App Bar"
               useMenu
+              onTitleClick={() => console.log('title click')}
               onMenuIconClick={() => setSideBarActive(true)}
             />
             <Content>
