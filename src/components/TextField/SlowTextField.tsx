@@ -2,8 +2,10 @@ import TextFieldBase, { TextFieldBaseProps } from './TextFieldBase';
 import React, { forwardRef } from 'react';
 import { useEffect, useState } from 'react';
 
-export interface SlowTextFieldProps extends TextFieldBaseProps {
+export interface SlowTextFieldProps
+  extends Omit<TextFieldBaseProps, 'onChange'> {
   value?: string;
+  onChange: (value: string) => void;
 }
 
 const SlowTextField = forwardRef<HTMLInputElement, SlowTextFieldProps>(
@@ -23,7 +25,7 @@ const SlowTextField = forwardRef<HTMLInputElement, SlowTextFieldProps>(
 
     return (
       <TextFieldBase
-        onChange={onValueChange}
+        onChange={e => onValueChange((e.target as HTMLInputElement).value)}
         value={localValue}
         ref={ref}
         {...rest}
