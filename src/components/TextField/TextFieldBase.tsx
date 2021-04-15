@@ -7,7 +7,7 @@ export interface TextFieldBaseProps
 }
 
 const TextFieldBase = forwardRef<HTMLInputElement, TextFieldBaseProps>(
-  ({ onChange = () => {}, id, label, fullWidth = false, ...rest }, ref) => {
+  ({ id, label, fullWidth = false, ...rest }, ref) => {
     return (
       <label
         htmlFor={id}
