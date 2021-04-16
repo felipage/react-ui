@@ -58,7 +58,7 @@ const PromptDialog = forwardRef<HTMLDivElement, PromptDialogProps>(
           <TextField
             label={children}
             value={input}
-            onChange={setInput}
+            onChange={e => setInput((e.target as HTMLInputElement).value)}
             fullWidth
             ref={inputRef}
           />
