@@ -14,7 +14,7 @@ export default {
     ),
   ],
   argTypes: {
-    onClick: { action: 'click' },
+    onClick: { action: 'clicked' },
   },
 } as Meta;
 

@@ -11,7 +11,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ colour = 'default', ...rest }: ButtonProps, ref) => {
     return (
       <ButtonBase
-        className={`shadow hover:shadow-lg ${
+        className={`hover:shadow-lg ${
           colour === 'default'
             ? 'text-black bg-gray-200 dark:text-white dark:bg-gray-800 dark:hover:bg-gray-600 dark:active:bg-gray-700 hover:bg-gray-400 active:bg-gray-300'
             : colour === 'red'
