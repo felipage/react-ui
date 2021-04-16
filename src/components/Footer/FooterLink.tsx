@@ -1,17 +1,17 @@
-import React, { forwardRef, HTMLProps } from 'react';
+import { HTMLMotionProps } from 'framer-motion';
+import React, { forwardRef } from 'react';
+import { Anchor } from '../Anchor';
 
-interface Props extends Omit<HTMLProps<HTMLAnchorElement>, 'ref'> {}
+interface Props extends Omit<HTMLMotionProps<'a'>, 'ref'> {}
 
 const FooterLink = forwardRef<HTMLAnchorElement, Props>(
-  ({ children, className = '', ...rest }: Props, ref) => {
+  ({ className = '', ...rest }: Props, ref) => {
     return (
-      <a
-        className={`py-0.5 px-1 block hover:text-feli active:text-feli-dark transition-colors focus:outline-none rounded-md cursor-pointer ${className}`}
-        ref={ref}
+      <Anchor
+        className={`py-0.5 px-1 block ${className}`}
         {...rest}
-      >
-        {children}
-      </a>
+        ref={ref}
+      />
     );
   }
 );
