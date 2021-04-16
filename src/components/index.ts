@@ -21,3 +21,4 @@ export * from './Snackbar';
 export * from './Footer';
 export * from './SideBar';
 export * from './Divider';
+export * from './Anchor';
