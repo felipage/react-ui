@@ -22,12 +22,6 @@ const Button = forwardRef<HTMLButtonElement, ButtonBaseProps>(
             ? 'text-base h-12 tracking-widest'
             : ''
         } ${className}`}
-        whileHover={{
-          scale: 1.05,
-        }}
-        whileTap={{
-          scale: 0.975,
-        }}
         ref={ref}
         {...rest}
       />
