@@ -22,3 +22,4 @@ export * from './Footer';
 export * from './SideBar';
 export * from './Divider';
 export * from './Anchor';
+export * from './ErrorMessage';
