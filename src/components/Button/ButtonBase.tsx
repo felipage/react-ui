@@ -10,7 +10,10 @@ export interface ButtonBaseProps
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonBaseProps>(
-  ({ className = '', size = 'normal', ...rest }: ButtonBaseProps, ref) => {
+  (
+    { className = '', size = 'normal', disabled, ...rest }: ButtonBaseProps,
+    ref
+  ) => {
     return (
       <motion.button
         className={`px-4 py-2 font-semibold text-black uppercase transition rounded-md select-none focus:outline-none ring-feli focus:ring-3 overflow-ellipsis overflow-hidden whitespace-nowrap ${
@@ -22,6 +25,10 @@ const Button = forwardRef<HTMLButtonElement, ButtonBaseProps>(
             ? 'text-base h-12 tracking-widest'
             : ''
         } ${className}`}
+        disabled={disabled}
+        animate={{
+          opacity: disabled ? 0.5 : 1,
+        }}
         ref={ref}
         {...rest}
       />
