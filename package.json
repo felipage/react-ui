@@ -30,6 +30,7 @@
     "deploy-storybook": "npm run deploy && gh-pages -d storybook-static"
   },
   "dependencies": {
+    "@headlessui/react": "^1.0.0",
     "framer-motion": "^3.9.1"
   },
   "peerDependencies": {

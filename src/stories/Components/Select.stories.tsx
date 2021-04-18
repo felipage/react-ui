@@ -20,10 +20,19 @@ export const $Select = Template.bind({});
 $Select.args = {
   label: 'Select',
   placeholder: 'test',
-  children: (
-    <>
-      <option value="" disabled selected></option>
-      <option value="hello-world">Hello World</option>
-    </>
-  ),
+  options: [
+    { value: '', name: '-Select-' },
+    { value: 'hello-world', name: 'Hello World' },
+    { value: 'hello-world-1', name: 'Hello World' },
+    { value: 'hello-world-2', name: 'Hello World' },
+    { value: 'disabled', name: 'Disabled', disabled: true },
+    { value: 'hello-world-3', name: 'Hello World' },
+    { value: 'hello-world-4', name: 'Hello World' },
+    { value: 'hello-world-5', name: 'Hello World' },
+    { value: 'hello-world-6', name: 'Hello World' },
+    { value: 'hello-world-7', name: 'Hello World' },
+    { value: 'hello-world-8', name: 'Hello World' },
+    { value: 'hello-world-9', name: 'Hello World' },
+    { value: 'hello-world-10', name: 'Hello World' },
+  ],
 };
